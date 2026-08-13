@@ -1,0 +1,87 @@
+<!-- Futuristic Footer -->
+<footer class="footer-futuristic">
+    <div class="container-xxl">
+        <div class="row g-4 justify-content-between">
+            
+            <!-- Company Info & PICO License -->
+            <div class="col-lg-5 col-md-6">
+                <div class="d-flex align-items-center gap-3 mb-3">
+                    <img src="<?= base_url('assets/images/logo.png') ?>" alt="INFINITE FINTECH" style="height: 48px; object-fit: contain;">
+                </div>
+                <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('company_fullname'); ?></h5>
+                <p class="text-muted small mb-3">
+                    <?= $this->lang->line('footer_desc'); ?>
+                </p>
+                <div class="p-3 rounded-3 mb-3" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2);">
+                    <div class="small text-white-50 mb-2">
+                        <i class="fas fa-certificate text-success me-2"></i><?= $this->lang->line('footer_lic_info'); ?>
+                    </div>
+                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 text-nowrap">
+                        <i class="fas fa-external-link-alt me-1"></i> <?= $this->lang->line('footer_lic_verify'); ?>
+                    </a>
+                </div>
+                <div class="small text-warning">
+                    <i class="fas fa-location-dot me-1"></i> <?= $this->lang->line('area_limit_desc'); ?>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white fw-bold mb-3"><?= $this->lang->line('footer_quick_links'); ?></h5>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="<?= site_root_url() ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-chevron-right me-2 small"></i><?= $this->lang->line('nav_home'); ?></a></li>
+                    <li><a href="<?= site_root_url('about') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-chevron-right me-2 small"></i><?= $this->lang->line('nav_about'); ?></a></li>
+                    <li><a href="<?= site_root_url('services') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-chevron-right me-2 small"></i><?= $this->lang->line('nav_services'); ?></a></li>
+                    <li><a href="<?= site_root_url('apply') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-chevron-right me-2 small"></i><?= $this->lang->line('nav_apply'); ?></a></li>
+                    <li><a href="<?= site_root_url('contact') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-chevron-right me-2 small"></i><?= $this->lang->line('nav_contact'); ?></a></li>
+                </ul>
+            </div>
+
+            <!-- Legal Policies -->
+            <div class="col-lg-3 col-md-6">
+                <h5 class="text-white fw-bold mb-3"><?= $this->lang->line('footer_legal_links'); ?></h5>
+                <ul class="list-unstyled d-flex flex-column gap-2">
+                    <li><a href="<?= site_root_url('policy/gov') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-shield-halved me-2 small"></i><?= $this->lang->line('tab_gov'); ?></a></li>
+                    <li><a href="<?= site_root_url('policy/privacy') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-lock me-2 small"></i><?= $this->lang->line('tab_privacy'); ?></a></li>
+                    <li><a href="<?= site_root_url('policy/terms') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-file-contract me-2 small"></i><?= $this->lang->line('tab_terms'); ?></a></li>
+                    <li><a href="<?= site_root_url('policy/agreement') ?>" class="text-muted text-decoration-none hover-emerald"><i class="fas fa-file-signature me-2 small"></i><?= $this->lang->line('tab_agreement'); ?></a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="my-4" style="border-color: rgba(255, 255, 255, 0.08);">
+
+        <div class="d-flex flex-column flex-md-row justify-content-center align-items-center text-muted small gap-2">
+            <div>
+                &copy; <?= date('Y'); ?> <?= $this->lang->line('company_fullname'); ?>. <?= $this->lang->line('footer_rights'); ?>
+            </div>
+        </div>
+    </div>
+</footer>
+
+</div> <!-- End .main-wrapper -->
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Three.js 3D WebGL Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="<?= site_assets_url('js/3d-scene.js') ?>"></script>
+
+<!-- Navbar Scroll Effect Script -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.getElementById('mainNavbar');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 30) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,695 @@
+/* Font Face Definition - LINE Seed Sans TH */
+@font-face {
+    font-family: 'LINESeedSansTH';
+    src: url('../fonts/LINESeedSansTH_W_Th.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeedSansTH';
+    src: url('../fonts/LINESeedSansTH_W_Rg.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeedSansTH';
+    src: url('../fonts/LINESeedSansTH_W_Bd.woff2') format('woff2');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeedSansTH';
+    src: url('../fonts/LINESeedSansTH_W_XBd.woff2') format('woff2');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'LINESeedSansTH';
+    src: url('../fonts/LINESeedSansTH_W_He.woff2') format('woff2');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --font-primary: 'LINESeedSansTH', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-secondary: 'LINESeedSansTH', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    
+    /* Blue - Purple - White Palette */
+    --bg-dark: #080C16;
+    --bg-card: rgba(14, 20, 40, 0.88);
+    --bg-card-hover: rgba(22, 30, 58, 0.94);
+    --bg-glass: rgba(255, 255, 255, 0.05);
+    
+    --primary-blue: #0284C7;
+    --primary-glow: #38BDF8;
+    --accent-purple: #8B5CF6;
+    --accent-purple-glow: #C084FC;
+    --accent-gold: #F59E0B;
+    
+    --text-white: #FFFFFF;
+    --text-slate: #E2E8F0;
+    --text-muted: #94A3B8;
+    
+    --border-glass: rgba(139, 92, 246, 0.22);
+    --border-glow: rgba(56, 189, 248, 0.45);
+    
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-xl: 32px;
+    
+    --shadow-3d: 0 20px 45px -15px rgba(0, 0, 0, 0.85), 0 0 30px 0 rgba(139, 92, 246, 0.3);
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-dark);
+    color: var(--text-slate);
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    color: var(--text-white) !important;
+    font-weight: 700;
+}
+
+.main-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Three.js Canvas Container - Fixed 3D Background Floating Across Page */
+#three-hero-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Futuristic Navbar */
+.futuristic-nav {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 95%;
+    max-width: 1380px;
+    z-index: 1000;
+    background: rgba(8, 12, 22, 0.88);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 12px 24px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.futuristic-nav .navbar-nav {
+    flex-wrap: nowrap !important;
+}
+
+.futuristic-nav.scrolled {
+    background: rgba(8, 12, 22, 0.96);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8), 0 0 25px rgba(139, 92, 246, 0.35);
+    border-color: rgba(139, 92, 246, 0.45);
+}
+
+.nav-brand-logo {
+    height: 42px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.nav-brand-logo:hover {
+    transform: scale(1.05);
+}
+
+.nav-link-custom {
+    color: var(--text-slate);
+    font-weight: 500;
+    font-size: 0.95rem;
+    padding: 8px 14px;
+    border-radius: var(--radius-sm);
+    text-decoration: none;
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.25s ease, box-shadow 0.25s ease;
+    border: 1px solid transparent;
+    white-space: nowrap !important;
+    display: inline-flex !important;
+    align-items: center !important;
+}
+
+.nav-link-custom:hover,
+.nav-link-custom.active {
+    color: var(--text-white) !important;
+    background: linear-gradient(135deg, rgba(2, 132, 199, 0.25), rgba(139, 92, 246, 0.25));
+    border-color: rgba(139, 92, 246, 0.45);
+    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.15);
+}
+
+/* Hover link utility */
+.hover-emerald {
+    transition: all 0.25s ease;
+    display: inline-block;
+    color: var(--text-slate) !important;
+}
+
+.hover-emerald:hover {
+    color: var(--primary-glow) !important;
+    transform: translateX(4px);
+}
+
+/* 3D Language Switcher Pill */
+.lang-toggle-pill {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border-glass);
+    border-radius: 50px;
+    padding: 3px;
+    position: relative;
+    width: 84px;
+    height: 36px;
+}
+
+.lang-toggle-pill .slider {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 38px;
+    height: 28px;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    border-radius: 50px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 2px 12px rgba(139, 92, 246, 0.5);
+}
+
+.lang-toggle-pill.en .slider {
+    transform: translateX(0);
+}
+
+.lang-toggle-pill.th .slider {
+    transform: translateX(40px);
+}
+
+.lang-toggle-pill a {
+    flex: 1;
+    text-align: center;
+    z-index: 2;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-slate);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 30px;
+}
+
+.lang-toggle-pill a.active {
+    color: var(--text-white) !important;
+}
+
+/* Hero Section */
+.hero-section {
+    position: relative;
+    padding-top: 170px;
+    padding-bottom: 110px;
+    background: radial-gradient(circle at 50% 30%, rgba(139, 92, 246, 0.16) 0%, rgba(56, 189, 248, 0.12) 35%, rgba(8, 12, 22, 0) 75%);
+    overflow: hidden;
+}
+
+.badge-pico {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 20px;
+    background: rgba(139, 92, 246, 0.16);
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    border-radius: 50px;
+    color: var(--accent-purple-glow);
+    font-size: 0.9rem;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+}
+
+/* Section Frosted Glass Backgrounds */
+.section-blurred-bg {
+    background: rgba(6, 10, 20, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(24px);
+    border-top: 1px solid rgba(139, 92, 246, 0.15);
+    border-bottom: 1px solid rgba(139, 92, 246, 0.15);
+}
+
+/* 3D Glass Cards */
+.card-3d {
+    background: rgba(12, 18, 38, 0.94);
+    border: 1px solid var(--border-glass);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+    height: 100%;
+}
+
+.card-3d:hover {
+    background: rgba(18, 28, 56, 0.97);
+    transform: translateY(-8px) rotateX(2deg) rotateY(-2deg);
+    border-color: rgba(139, 92, 246, 0.55);
+    box-shadow: var(--shadow-3d);
+}
+
+.card-icon-wrapper {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.25), rgba(2, 132, 199, 0.15));
+    border: 1px solid rgba(139, 92, 246, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: var(--accent-purple-glow);
+    margin-bottom: 22px;
+}
+
+/* Buttons */
+.btn-primary-3d {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    color: var(--text-white) !important;
+    font-weight: 600;
+    padding: 14px 34px;
+    border-radius: 50px;
+    border: none;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 10px 25px rgba(139, 92, 246, 0.45);
+    transition: all 0.3s ease;
+}
+
+.btn-primary-3d:hover {
+    background: linear-gradient(135deg, var(--primary-glow), var(--accent-purple-glow));
+    color: var(--text-white) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 15px 32px rgba(139, 92, 246, 0.6);
+}
+
+.btn-outline-3d {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-white) !important;
+    font-weight: 600;
+    padding: 14px 34px;
+    border-radius: 50px;
+    border: 1px solid var(--border-glass);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.btn-outline-3d:hover {
+    background: rgba(255, 255, 255, 0.16);
+    border-color: rgba(139, 92, 246, 0.45);
+    color: var(--text-white) !important;
+    transform: translateY(-2px);
+}
+
+/* License Audit Card */
+.license-card {
+    background: linear-gradient(135deg, rgba(139, 92, 246, 0.22), rgba(12, 18, 36, 0.96));
+    border: 1px solid rgba(139, 92, 246, 0.5);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+}
+
+/* Range Slider Custom Styling for Calculator */
+.form-range::-webkit-slider-thumb {
+    background: var(--accent-purple-glow);
+    box-shadow: 0 0 14px rgba(192, 132, 252, 0.9);
+    cursor: pointer;
+}
+.form-range::-moz-range-thumb {
+    background: var(--accent-purple-glow);
+    box-shadow: 0 0 14px rgba(192, 132, 252, 0.9);
+    cursor: pointer;
+}
+.form-range::-webkit-slider-runnable-track {
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+}
+
+/* Timeline 3D Steps */
+.timeline-step {
+    position: relative;
+    padding-left: 65px;
+    margin-bottom: 35px;
+}
+
+.timeline-step::before {
+    content: '';
+    position: absolute;
+    left: 24px;
+    top: 45px;
+    bottom: -35px;
+    width: 2px;
+    background: rgba(139, 92, 246, 0.35);
+}
+
+.timeline-step:last-child::before {
+    display: none;
+}
+
+.step-number {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    color: var(--text-white);
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.6);
+}
+
+/* Tab Navigation */
+.nav-pills-custom .nav-link {
+    color: var(--text-slate);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-glass);
+    border-radius: 50px;
+    padding: 10px 24px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.nav-pills-custom .nav-link.active,
+.nav-pills-custom .nav-link:hover {
+    color: var(--text-white) !important;
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
+    border-color: transparent;
+    box-shadow: 0 5px 18px rgba(139, 92, 246, 0.45);
+}
+
+/* Footer Styling */
+.footer-futuristic {
+    background: #04060E;
+    border-top: 1px solid var(--border-glass);
+    padding-top: 80px;
+    padding-bottom: 40px;
+    margin-top: auto;
+    position: relative;
+    z-index: 10;
+}
+
+/* Form inputs high contrast override */
+.form-control, textarea, select {
+    background-color: rgba(14, 20, 40, 0.9) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(139, 92, 246, 0.4) !important;
+}
+
+.form-control::placeholder, textarea::placeholder {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/* Text utility colors for Blue-Purple-White Theme */
+.text-white {
+    color: #FFFFFF !important; /* Pure Crisp White for Headings */
+}
+.text-slate, .text-muted {
+    color: #E2E8F0 !important; /* Bright Silver Slate Body */
+}
+.text-emerald, .text-success, .text-info {
+    color: var(--primary-glow) !important;
+}
+.btn-outline-success {
+    color: var(--primary-glow) !important;
+    border-color: rgba(56, 189, 248, 0.4) !important;
+}
+.btn-outline-success:hover {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple)) !important;
+    color: #FFFFFF !important;
+    border-color: transparent !important;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+    background: rgba(139, 92, 246, 0.45);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-purple);
+}
+
+/* Container Safe Margins Across All Screen Sizes */
+.container, .container-fluid, .container-xxl, .container-xl, .container-lg {
+    padding-left: clamp(16px, 3.5vw, 40px) !important;
+    padding-right: clamp(16px, 3.5vw, 40px) !important;
+}
+
+/* Notebook / Laptop Screen Optimization (13-15" Displays & 125%/150% Scaling) */
+@media (min-width: 992px) and (max-width: 1440px) {
+    .futuristic-nav {
+        top: 12px;
+        width: 96% !important;
+        padding: 8px 16px !important;
+    }
+    .nav-brand-logo {
+        height: 38px !important;
+    }
+    .nav-link-custom {
+        padding: 6px 10px !important;
+        font-size: 0.88rem !important;
+    }
+    .hero-section {
+        padding-top: 135px !important;
+        padding-bottom: 75px !important;
+    }
+    .display-4 {
+        font-size: 2.15rem !important;
+        line-height: 1.25 !important;
+    }
+    .display-6 {
+        font-size: 1.65rem !important;
+        line-height: 1.3 !important;
+    }
+    h1, .h1 {
+        font-size: 1.85rem !important;
+    }
+    h2, .h2 {
+        font-size: 1.55rem !important;
+    }
+    h3, .h3 {
+        font-size: 1.35rem !important;
+    }
+    .fs-5 {
+        font-size: 0.98rem !important;
+    }
+    p, .text-slate {
+        font-size: 0.95rem !important;
+        line-height: 1.7 !important;
+    }
+    .card-3d {
+        padding: 24px 20px !important;
+    }
+    .license-card {
+        padding: 24px 20px !important;
+    }
+}
+
+/* Mobile Responsiveness & Full-Width Vertical Navbar Drawer */
+@media (max-width: 991px) {
+    .futuristic-nav {
+        top: 10px;
+        width: 95%;
+        padding: 12px 18px;
+    }
+    .navbar-collapse {
+        background: rgba(8, 12, 22, 0.98);
+        border: 1px solid var(--border-glass);
+        border-radius: var(--radius-md);
+        padding: 20px 16px;
+        margin-top: 12px;
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.8);
+    }
+    .navbar-collapse .navbar-nav {
+        width: 100% !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin-bottom: 16px !important;
+    }
+    .navbar-collapse .nav-item {
+        width: 100% !important;
+    }
+    .navbar-collapse .nav-link-custom {
+        display: flex !important;
+        align-items: center !important;
+        width: 100% !important;
+        padding: 14px 20px !important;
+        font-size: 1.05rem !important;
+        border-radius: var(--radius-md) !important;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .navbar-collapse .nav-link-custom:hover,
+    .navbar-collapse .nav-link-custom.active {
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.3), rgba(139, 92, 246, 0.3)) !important;
+        border-color: rgba(139, 92, 246, 0.5) !important;
+    }
+    .navbar-collapse .d-flex.align-items-center {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 12px !important;
+        margin-top: 8px !important;
+    }
+    .navbar-collapse .lang-toggle-pill {
+        width: 100% !important;
+        height: 46px !important;
+        padding: 4px !important;
+        position: relative !important;
+    }
+    .navbar-collapse .lang-toggle-pill .slider {
+        position: absolute !important;
+        top: 4px !important;
+        left: 4px !important;
+        width: calc(50% - 4px) !important;
+        height: 36px !important;
+        transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    }
+    .navbar-collapse .lang-toggle-pill.en .slider {
+        transform: translateX(0) !important;
+    }
+    .navbar-collapse .lang-toggle-pill.th .slider {
+        transform: translateX(100%) !important;
+    }
+    .navbar-collapse .lang-toggle-pill a {
+        font-size: 0.95rem !important;
+        line-height: 38px !important;
+    }
+    .navbar-collapse .btn-primary-3d {
+        width: 100% !important;
+        justify-content: center !important;
+        padding: 14px 24px !important;
+        font-size: 1.05rem !important;
+    }
+    .hero-section {
+        padding-top: 135px;
+    }
+}
+
+/* Mobile Typography & Fluid Spacing Optimization */
+@media (max-width: 768px) {
+    .display-4 {
+        font-size: 1.85rem !important;
+        line-height: 1.3 !important;
+    }
+    .display-6 {
+        font-size: 1.5rem !important;
+        line-height: 1.35 !important;
+    }
+    h1, .h1 {
+        font-size: 1.75rem !important;
+        line-height: 1.3 !important;
+    }
+    h2, .h2 {
+        font-size: 1.45rem !important;
+        line-height: 1.35 !important;
+    }
+    h3, .h3 {
+        font-size: 1.3rem !important;
+        line-height: 1.4 !important;
+    }
+    h4, .h4 {
+        font-size: 1.15rem !important;
+        line-height: 1.4 !important;
+    }
+    h5, .h5 {
+        font-size: 1.05rem !important;
+        line-height: 1.45 !important;
+    }
+    h6, .h6 {
+        font-size: 0.95rem !important;
+    }
+    .fs-3 {
+        font-size: 1.35rem !important;
+    }
+    .fs-4 {
+        font-size: 1.2rem !important;
+    }
+    .fs-5 {
+        font-size: 1.0rem !important;
+    }
+    .fs-6 {
+        font-size: 0.92rem !important;
+    }
+    body, p, .text-slate {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+    .card-3d {
+        padding: 22px 18px !important;
+    }
+    .license-card {
+        padding: 22px 18px !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .display-4 {
+        font-size: 1.65rem !important;
+    }
+    .display-6 {
+        font-size: 1.35rem !important;
+    }
+    h1, .h1 {
+        font-size: 1.55rem !important;
+    }
+    h2, .h2 {
+        font-size: 1.35rem !important;
+    }
+    h3, .h3 {
+        font-size: 1.2rem !important;
+    }
+    .hero-section {
+        padding-top: 120px;
+        padding-bottom: 70px;
+    }
+}
