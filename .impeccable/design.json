@@ -1,56 +1,14 @@
 {
-  "schemaVersion": 2,
-  "generatedAt": "2026-08-13T16:22:00Z",
-  "title": "Design System: Infinite Fintech",
-  "extensions": {
-    "colorMeta": {
-      "primary": { "role": "primary", "displayName": "Electric Sapphire Blue", "canonical": "#0284C7" },
-      "primary-glow": { "role": "primary", "displayName": "Sky Blue Glow", "canonical": "#38BDF8" },
-      "accent-gold": { "role": "tertiary", "displayName": "Metallic Gold", "canonical": "#F59E0B" },
-      "neutral-dark": { "role": "neutral", "displayName": "Obsidian Dark", "canonical": "#040914" },
-      "neutral-card": { "role": "neutral", "displayName": "Navy Slate Glass", "canonical": "#0A1326" }
-    },
-    "typographyMeta": {
-      "display": { "displayName": "Display", "purpose": "Hero headlines and main page titles." },
-      "body": { "displayName": "Body", "purpose": "General body text and legal documents." }
-    },
-    "shadows": [
-      { "name": "3d-card-hover", "value": "0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px 0 rgba(56, 189, 248, 0.2)", "purpose": "Elevation shadow on 3D glass cards hover." }
-    ]
+  "theme": "light",
+  "palette": {
+    "background": "#F8FAFC",
+    "surface": "#FFFFFF",
+    "primary_blue": "#0284C7",
+    "accent_purple": "#7C3AED",
+    "text_heading": "#0F172A",
+    "text_body": "#334155"
   },
-  "components": [
-    {
-      "name": "Primary 3D Button",
-      "kind": "button",
-      "refersTo": "button-primary-3d",
-      "description": "Primary call to action button with 3D gradient and pill border radius.",
-      "html": "<a href=\"#\" class=\"ds-btn-primary-3d\"><i class=\"fas fa-paper-plane\"></i> สมัครสินเชื่อ</a>",
-      "css": ".ds-btn-primary-3d { background: linear-gradient(135deg, #0284C7, #1D4ED8); color: #ffffff; font-family: LINESeedSansTH, sans-serif; font-weight: 600; padding: 14px 34px; border-radius: 50px; text-decoration: none; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(2, 132, 199, 0.4); transition: all 0.3s ease; } .ds-btn-primary-3d:hover { background: linear-gradient(135deg, #38BDF8, #0284C7); color: #ffffff; transform: translateY(-2px); box-shadow: 0 15px 32px rgba(56, 189, 248, 0.5); }"
-    },
-    {
-      "name": "3D Glass Card",
-      "kind": "card",
-      "refersTo": "card-3d",
-      "description": "Translucent glass card container with 3D tilt transition.",
-      "html": "<div class=\"ds-card-3d\"><h4>ได้รับอนุญาตอย่างถูกต้อง</h4><p>ประกอบธุรกิจสินเชื่อรายย่อยระดับจังหวัด (PICO Finance)</p></div>",
-      "css": ".ds-card-3d { background: rgba(10, 19, 38, 0.78); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 24px; padding: 32px; backdrop-filter: blur(14px); color: #E2E8F0; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); } .ds-card-3d:hover { transform: translateY(-8px); border-color: rgba(56, 189, 248, 0.45); box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.7), 0 0 25px 0 rgba(56, 189, 248, 0.2); }"
-    }
-  ],
-  "narrative": {
-    "northStar": "The Sapphire Vault",
-    "overview": "The visual world of Infinite Fintech balances corporate trustworthiness as a regulated PICO Finance institution with futuristic, high-end 3D fintech aesthetics.",
-    "keyCharacteristics": [
-      "Obsidian & Electric Sapphire Palette",
-      "Continuous 3D WebGL Scene",
-      "Glassmorphism & Depth"
-    ],
-    "dos": [
-      "Do use LINE Seed Sans TH font family across all headings and controls.",
-      "Do ensure all text strings load dynamically from site_lang.php."
-    ],
-    "donts": [
-      "Don't use solid opaque backgrounds for cards.",
-      "Don't hardcode raw Thai or English text directly in views."
-    ]
+  "typography": {
+    "font_family": "LINESeedSansTH"
   }
 }

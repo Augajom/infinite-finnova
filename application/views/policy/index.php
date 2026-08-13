@@ -25,19 +25,21 @@
         </div>
 
         <!-- Pills Header -->
-        <div class="d-flex flex-wrap justify-content-center nav-pills-custom mb-5" id="policyPills" role="tablist">
-            <button class="nav-link <?= (!isset($active_tab) || $active_tab == 'gov') ? 'active' : '' ?>" id="pills-gov-tab" data-bs-toggle="pill" data-bs-target="#pills-gov" type="button" role="tab">
-                <i class="fas fa-certificate me-2"></i><?= $this->lang->line('tab_gov'); ?>
-            </button>
-            <button class="nav-link <?= (isset($active_tab) && $active_tab == 'privacy') ? 'active' : '' ?>" id="pills-privacy-tab" data-bs-toggle="pill" data-bs-target="#pills-privacy" type="button" role="tab">
-                <i class="fas fa-lock me-2"></i><?= $this->lang->line('tab_privacy'); ?>
-            </button>
-            <button class="nav-link <?= (isset($active_tab) && $active_tab == 'terms') ? 'active' : '' ?>" id="pills-terms-tab" data-bs-toggle="pill" data-bs-target="#pills-terms" type="button" role="tab">
-                <i class="fas fa-file-contract me-2"></i><?= $this->lang->line('tab_terms'); ?>
-            </button>
-            <button class="nav-link <?= (isset($active_tab) && $active_tab == 'agreement') ? 'active' : '' ?>" id="pills-agreement-tab" data-bs-toggle="pill" data-bs-target="#pills-agreement" type="button" role="tab">
-                <i class="fas fa-file-signature me-2"></i><?= $this->lang->line('tab_agreement'); ?>
-            </button>
+        <div class="text-center mb-5">
+            <div class="d-inline-flex flex-wrap justify-content-center nav-pills-custom" id="policyPills" role="tablist">
+                <button class="nav-link <?= (!isset($active_tab) || $active_tab == 'gov') ? 'active' : '' ?>" id="pills-gov-tab" data-bs-toggle="pill" data-bs-target="#pills-gov" type="button" role="tab">
+                    <i class="fas fa-certificate me-2"></i><?= $this->lang->line('tab_gov'); ?>
+                </button>
+                <button class="nav-link <?= (isset($active_tab) && $active_tab == 'privacy') ? 'active' : '' ?>" id="pills-privacy-tab" data-bs-toggle="pill" data-bs-target="#pills-privacy" type="button" role="tab">
+                    <i class="fas fa-lock me-2"></i><?= $this->lang->line('tab_privacy'); ?>
+                </button>
+                <button class="nav-link <?= (isset($active_tab) && $active_tab == 'terms') ? 'active' : '' ?>" id="pills-terms-tab" data-bs-toggle="pill" data-bs-target="#pills-terms" type="button" role="tab">
+                    <i class="fas fa-file-contract me-2"></i><?= $this->lang->line('tab_terms'); ?>
+                </button>
+                <button class="nav-link <?= (isset($active_tab) && $active_tab == 'agreement') ? 'active' : '' ?>" id="pills-agreement-tab" data-bs-toggle="pill" data-bs-target="#pills-agreement" type="button" role="tab">
+                    <i class="fas fa-file-signature me-2"></i><?= $this->lang->line('tab_agreement'); ?>
+                </button>
+            </div>
         </div>
 
         <!-- Tab Content -->
@@ -82,21 +84,21 @@
 
                     <div class="row g-4 my-3">
                         <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                                 <i class="fas fa-database text-info fs-3 mb-3"></i>
                                 <h5 class="text-white fw-bold">1. การเก็บรวบรวมข้อมูล</h5>
                                 <p class="text-muted small mb-0" style="line-height: 1.6;">ข้อมูลระบุตัวตน (ชื่อ-นามสกุล, บัตรประชาชน), ข้อมูลการติดต่อ (อีเมล, เบอร์โทร), ข้อมูลทางการเงินและบัญชีธนาคาร</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                                 <i class="fas fa-shield-virus text-info fs-3 mb-3"></i>
                                 <h5 class="text-white fw-bold">2. ความปลอดภัยข้อมูล</h5>
                                 <p class="text-muted small mb-0" style="line-height: 1.6;">ปกป้องด้วยใบรับรองความปลอดภัย SSL 256-bit ส่งผ่านการเชื่อมต่อเข้ารหัส HTTPS ไปยังเซิร์ฟเวอร์ความปลอดภัยสูง</p>
                             </div>
                         </div>
                         <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                                 <i class="fas fa-user-gear text-warning fs-3 mb-3"></i>
                                 <h5 class="text-white fw-bold">3. สิทธิของผู้ใช้</h5>
                                 <p class="text-muted small mb-0" style="line-height: 1.6;">สิทธิขอเข้าถึง แก้ไข ลบข้อมูลส่วนบุคคล (ถูกลืม) หรือถอนความยินยอมได้ตามกฎหมาย PDPA</p>
@@ -116,7 +118,7 @@
                         <?= $this->lang->line('terms_intro'); ?>
                     </p>
 
-                    <div class="p-4 rounded-4" style="background: rgba(0, 0, 0, 0.4); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                         <h5 class="text-white fw-bold mb-3">ผู้มีสิทธิใช้บริการ:</h5>
                         <ul class="text-slate mb-4 fs-6">
                             <li>มีอายุไม่ต่ำกว่า 20 ปีบริบูรณ์</li>
@@ -154,13 +156,13 @@
                         <?= $this->lang->line('agreement_heading'); ?>
                     </h3>
                     
-                    <div class="p-4 rounded-4" style="background: rgba(0, 0, 0, 0.5); border: 1px solid var(--border-glass); font-family: monospace;">
+                    <div class="p-4 rounded-4" style="background: #F8FAFC; border: 1px solid var(--border-glass); font-family: monospace;">
                         <h4 class="text-center text-white fw-bold mb-4">สัญญาเงินกู้ (ตัวอย่าง)</h4>
                         <p class="text-muted text-center mb-4">สัญญานี้ทำขึ้น ณ วันที่ [DD/MM/YYYY]</p>
 
                         <div class="row g-4 mb-4">
                             <div class="col-md-6">
-                                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.03);">
+                                <div class="p-3 rounded-3" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.15);">
                                     <h6 class="text-info fw-bold">ผู้ให้กู้:</h6>
                                     <p class="text-slate mb-1"><strong>ชื่อบริษัท:</strong> บริษัท อินฟินิท ฟินเทค จำกัด</p>
                                     <p class="text-slate mb-1"><strong>ที่ตั้ง:</strong> 115 หมู่ที่ 2 ตำบลละหาร อำเภอบางบัวทอง จังหวัดนนทบุรี 11110</p>
@@ -168,7 +170,7 @@
                                 </div>
                             </div>
                             <div class="col-md-6">
-                                <div class="p-3 rounded-3" style="background: rgba(255, 255, 255, 0.03);">
+                                <div class="p-3 rounded-3" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.15);">
                                     <h6 class="text-warning fw-bold">ผู้กู้:</h6>
                                     <p class="text-slate mb-1"><strong>ชื่อ:</strong> ________________________</p>
                                     <p class="text-slate mb-1"><strong>ที่อยู่:</strong> ________________________</p>

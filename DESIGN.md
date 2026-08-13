@@ -1,61 +1,28 @@
----
-name: Infinite Fintech Design System
-description: High-End Futuristic 3D Fintech interface in Blue-Purple-White theme with LINE Seed Sans TH typography.
-colors:
-  primary-blue: "#0284C7"
-  primary-glow: "#38BDF8"
-  accent-purple: "#8B5CF6"
-  accent-purple-glow: "#C084FC"
-  accent-gold: "#F59E0B"
-  neutral-dark: "#080C16"
-  neutral-card: "rgba(14, 20, 40, 0.88)"
-  neutral-text: "#FFFFFF"
-  neutral-slate: "#E2E8F0"
-  border-glass: "rgba(139, 92, 246, 0.22)"
-typography:
-  display:
-    fontFamily: "LINESeedSansTH, sans-serif"
-    fontSize: "clamp(2.2rem, 5vw, 3.5rem)"
-    fontWeight: 700
-    lineHeight: "1.2"
-  body:
-    fontFamily: "LINESeedSansTH, sans-serif"
-    fontSize: "1rem"
-    fontWeight: 400
-    lineHeight: "1.6"
-rounded:
-  sm: "8px"
-  md: "16px"
-  lg: "24px"
-  pill: "50px"
-spacing:
-  sm: "8px"
-  md: "16px"
-  lg: "32px"
-  xl: "60px"
-components:
-  button-primary-3d:
-    backgroundColor: "{colors.primary-blue}"
-    textColor: "{colors.neutral-text}"
-    rounded: "{rounded.pill}"
-    padding: "14px 34px"
-  card-3d:
-    backgroundColor: "{colors.neutral-card}"
-    rounded: "{rounded.lg}"
-    padding: "32px"
----
+# DESIGN.md - Design System Documentation
 
-# Design System: Infinite Fintech (Blue-Purple-White)
+## Executive Theme Summary
+- **Primary Palette**: Blue - Purple - White (`ฟ้า-ม่วง-ขาว`) Light Theme
+- **Background**: High-contrast Pearl White (`#F8FAFC`) with Crisp Pure White Surface (`#FFFFFF`)
+- **Primary Brand Colors**:
+  - Sky Blue Accent: `#0284C7`
+  - Violet Purple Accent: `#7C3AED`
+- **Typography**: LINE Seed Sans TH (`LINESeedSansTH`)
+- **Reading Contrast**: 100% High-Contrast Dark Slate Headings (`#0F172A`) & Dark Slate Body (`#334155`)
+- **Card Design**: Pure White Glassmorphism Cards with Soft Purple Glow Borders & Shadows
+- **Footer Anchor**: Deep Dark Slate Anchor (`#0F172A`) with Pure White Headings and Slate Links
 
-## Overview
+## Color Tokens
+```css
+--bg-dark: #F8FAFC;
+--bg-card: #FFFFFF;
+--primary-blue: #0284C7;
+--accent-purple: #7C3AED;
+--text-white: #0F172A;
+--text-slate: #334155;
+--text-muted: #64748B;
+--border-glass: rgba(124, 58, 237, 0.18);
+```
 
-**Creative North Star: "The Sapphire & Amethyst Citadel"**
-
-The visual world of Infinite Fintech balances corporate trustworthiness as a regulated PICO Finance institution with high-end 3D fintech aesthetics in a **Blue-Purple-White (`ฟ้า-ม่วง-ขาว`)** palette. The deep midnight glass background (`#080C16`) sets an aura of security, while vibrant electric sapphire blue (`#0284C7`), sky blue glow (`#38BDF8`), royal violet (`#8B5CF6`), and pure crisp white (`#FFFFFF`) typography ensure maximum visual authority and legibility.
-
-Typography relies exclusively on **LINE Seed Sans TH** (`LINESeedSansTH`).
-
-**Key Characteristics:**
-- **Blue - Purple - White Palette:** Deep sapphire-purple glass surfaces accented by glowing cyan-blue and violet borders.
-- **Continuous 3D WebGL Scene:** Procedural Three.js 3D WebGL background scene featuring a floating 3D Sapphire & Amethyst Gem.
-- **High-Contrast White Typography:** Headings in pure white (`#FFFFFF`) and body copy in crisp silver slate (`#E2E8F0`).
+## Responsive Layout Rules
+- **Notebook & Laptop Displays (13-15", 1366x768 / 1536x864)**: Fluid container padding `clamp(16px, 3.5vw, 40px)` and navbar scaled to `96%` width with `white-space: nowrap` to prevent text wrapping distortion.
+- **Mobile Screens (< 991px)**: Full-width vertical navigation drawer, fluid typography scaling, and no overflow on long links or license badges.

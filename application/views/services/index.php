@@ -32,8 +32,8 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(4, 9, 20, 0.92)); border: 1px solid rgba(56, 189, 248, 0.35);">
-                        <h4 class="text-white fw-bold mb-3 border-bottom pb-2" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.2);">
+                        <h4 class="text-white fw-bold mb-3 border-bottom pb-2" style="border-color: rgba(124, 58, 237, 0.15) !important;">
                             <i class="fas fa-circle-info text-info me-2"></i><?= $this->lang->line('srv_specs_title'); ?>
                         </h4>
                         
@@ -50,7 +50,7 @@
                             </li>
                         </ul>
 
-                        <div class="small text-muted border-top pt-3" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                        <div class="small text-muted border-top pt-3" style="border-color: rgba(124, 58, 237, 0.15) !important;">
                             <?= $specs['rate_note']; ?>
                         </div>
                     </div>
@@ -108,35 +108,32 @@
         <!-- Fast Approval Features (5 Points) -->
         <div class="text-center mb-4">
             <h2 class="display-6 text-white fw-bold mb-2"><?= $this->lang->line('fast_approval_title'); ?></h2>
-            <p class="text-muted fs-5"><?= $this->lang->line('fast_approval_subtitle'); ?></p>
+            <div class="mx-auto" style="width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary-blue), var(--primary-glow)); border-radius: 2px;"></div>
         </div>
 
-        <div class="row g-4 mb-5 justify-content-center">
-            <?php $fa_items = $this->lang->line('fast_approval_list'); ?>
-            <?php if (!empty($fa_items)): foreach ($fa_items as $index => $item): ?>
+        <div class="row g-4 mb-5">
+            <?php $features = $this->lang->line('fast_approval_items'); ?>
+            <?php $icons = ['fa-scale-balanced', 'fa-bolt', 'fa-clock-rotate-left', 'fa-hand-holding-dollar', 'fa-sliders']; ?>
+            <?php if (!empty($features)): foreach ($features as $index => $feat): ?>
                 <div class="col-lg-4 col-md-6">
-                    <div class="card-3d p-4">
-                        <div class="d-flex align-items-center gap-3 mb-3">
-                            <div class="badge rounded-circle bg-info bg-opacity-25 text-info p-3 font-weight-bold fs-5" style="width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; min-width: 42px;">
-                                <?= $index + 1; ?>
-                            </div>
-                            <h5 class="text-white mb-0 fw-bold"><?= $item['title']; ?></h5>
+                    <div class="card-3d p-4 h-100">
+                        <div class="card-icon-wrapper mb-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                            <i class="fas <?= isset($icons[$index]) ? $icons[$index] : 'fa-check'; ?>"></i>
                         </div>
-                        <p class="text-slate small mb-0" style="line-height: 1.65;">
-                            <?= $item['desc']; ?>
-                        </p>
+                        <h5 class="text-white fw-bold fs-5 mb-2"><?= $feat['title']; ?></h5>
+                        <p class="text-slate small mb-0" style="line-height: 1.7;"><?= $feat['desc']; ?></p>
                     </div>
                 </div>
             <?php endforeach; endif; ?>
         </div>
 
-        <!-- Repayment Calculation Example (with TH / EN Image viewer) -->
+        <!-- Calculation Example Image Viewer Section -->
         <div class="card-3d p-4 p-md-5">
             <div class="text-center mb-4">
                 <span class="badge bg-warning bg-opacity-25 text-warning mb-2 px-3 py-2 rounded-pill fw-bold">Sample Calculation</span>
                 <h3 class="text-white fw-bold mb-1"><?= $this->lang->line('calc_example_title'); ?></h3>
                 <p class="text-muted small"><?= $this->lang->line('calc_example_subtitle'); ?></p>
-                <div class="p-3 rounded-3 d-inline-block text-white fw-bold" style="background: rgba(56, 189, 248, 0.12); border: 1px solid rgba(56, 189, 248, 0.3);">
+                <div class="p-3 rounded-3 d-inline-block text-white fw-bold" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.22);">
                     <?= $this->lang->line('calc_example_detail'); ?>
                 </div>
             </div>
@@ -144,12 +141,12 @@
             <!-- Image Viewer Container -->
             <?php $current_lang = $this->session->userdata('site_lang'); ?>
             <div class="text-center my-4">
-                <div class="d-inline-block p-2 rounded-4" style="background: rgba(0, 0, 0, 0.4); border: 1px solid rgba(56, 189, 248, 0.3); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);">
+                <div class="d-inline-block p-2 rounded-4" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.2); box-shadow: 0 10px 30px rgba(2, 132, 199, 0.1);">
                     <img id="calcExampleImg" src="<?= base_url('assets/images/' . (($current_lang == 'english') ? 'image2.png' : 'image1.png')) ?>" alt="Repayment Calculation Example" class="img-fluid rounded-3" style="max-height: 500px; object-fit: contain;">
                 </div>
             </div>
 
-            <div class="alert alert-dark border-0 rounded-4 text-muted small text-center mb-0" style="background: rgba(255, 255, 255, 0.03);">
+            <div class="alert border-0 rounded-4 text-muted text-center mb-0" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.2) !important; font-size: 0.75rem !important;">
                 <i class="fas fa-circle-exclamation text-warning me-1"></i>
                 <?= $this->lang->line('calc_example_note'); ?>
             </div>

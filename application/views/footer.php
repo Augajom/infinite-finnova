@@ -65,10 +65,6 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Three.js 3D WebGL Library -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="<?= site_assets_url('js/3d-scene.js') ?>"></script>
-
 <!-- Navbar Scroll Effect Script -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {

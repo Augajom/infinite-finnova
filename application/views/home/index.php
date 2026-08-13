@@ -1,5 +1,9 @@
 <!-- Hero Section -->
 <section class="hero-section">
+    <!-- Animated Soft Aura Background Blobs -->
+    <div class="hero-aura-blob-1"></div>
+    <div class="hero-aura-blob-2"></div>
+
     <div class="container-xxl position-relative" style="z-index: 2;">
         <div class="row align-items-center g-5">
             
@@ -7,7 +11,7 @@
                 <div class="badge-pico mb-3">
                     <i class="fas fa-shield-check text-success"></i> <?= $this->lang->line('home_hero_subtitle'); ?>
                 </div>
-                <h1 class="display-6 text-white fw-bold mb-3" style="line-height: 1.2;">
+                <h1 class="text-white fw-bold mb-3" style="line-height: 1.2; font-size: 2.1rem !important;">
                     <?= $this->lang->line('home_hero_title'); ?>
                 </h1>
                 <p class="lead text-slate mb-4 fs-5" style="max-width: 680px;">
@@ -44,7 +48,7 @@
                     <p class="small text-slate mb-3">
                         <?= $this->lang->line('home_company_intro'); ?>
                     </p>
-                    <div class="p-3 rounded-3 mb-3" style="background: rgba(0, 0, 0, 0.4); border: 1px dashed rgba(16, 185, 129, 0.3);">
+                    <div class="p-3 rounded-3 mb-3" style="background: rgba(2, 132, 199, 0.06); border: 1px dashed rgba(2, 132, 199, 0.3);">
                         <div class="small text-white fw-bold mb-1">
                             <i class="fas fa-file-contract text-emerald me-1"></i> <?= $this->lang->line('home_license_no'); ?>
                         </div>
@@ -56,6 +60,44 @@
             </div>
 
         </div>
+
+        <!-- Floating Trust Metrics Badges -->
+        <div class="row g-3 mt-4 pt-2">
+            <div class="col-md-4 col-6">
+                <div class="floating-stat-badge d-flex align-items-center gap-3">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                        <i class="fas fa-shield-halved"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_pico_title'); ?></h6>
+                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_pico_sub'); ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-6">
+                <div class="floating-stat-badge d-flex align-items-center gap-3" style="animation-delay: 1.2s;">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_fast_title'); ?></h6>
+                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_fast_sub'); ?></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-12">
+                <div class="floating-stat-badge d-flex align-items-center gap-3" style="animation-delay: 2.4s;">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                        <i class="fas fa-hand-holding-dollar"></i>
+                    </div>
+                    <div>
+                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_amount_title'); ?></h6>
+                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_amount_sub'); ?></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
@@ -132,8 +174,8 @@
                     <!-- Amount Slider -->
                     <div class="mb-4">
                         <div class="d-flex justify-content-between text-white fw-bold mb-2">
-                            <span>วงเงินสินเชื่อที่ต้องการ:</span>
-                            <span class="text-success fs-5" id="calcAmountVal">10,000 บาท</span>
+                            <span>วงเงินกู้ที่ต้องการ:</span>
+                            <span class="text-success fs-4" id="calcAmountVal">10,000 บาท</span>
                         </div>
                         <input type="range" class="form-range" id="calcAmountRange" min="5000" max="50000" step="1000" value="10000">
                         <div class="d-flex justify-content-between text-muted small">
@@ -157,19 +199,14 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(7, 13, 24, 0.9)); border: 1px solid rgba(16, 185, 129, 0.3);">
+                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.22); box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);">
                         <div class="text-center mb-4">
                             <span class="text-muted small">ประมาณการดอกเบี้ยสูงสุด (35.80%/ปี)</span>
                             <h1 class="display-5 text-success fw-bold my-2" id="calcInterestVal">892.49 บาท</h1>
-                            <span class="text-slate small">ยอดชำระคืนรวมประมาณ: <strong text-white id="calcTotalVal">10,892.49 บาท</strong></span>
+                            <span class="text-slate small">ยอดชำระคืนรวมประมาณ: <strong class="text-white" id="calcTotalVal">10,892.49 บาท</strong></span>
                         </div>
 
-                        <hr style="border-color: rgba(255, 255, 255, 0.1);">
-
-                        <div class="small text-muted mb-4">
-                            <i class="fas fa-info-circle me-1 text-warning"></i>
-                            <?= $this->lang->line('repayment_example_note'); ?>
-                        </div>
+                        <hr style="border-color: rgba(124, 58, 237, 0.15);">
 
                         <a href="<?= site_root_url('apply') ?>" class="btn-primary-3d w-100 justify-content-center">
                             <i class="fas fa-paper-plane me-2"></i> สมัครสินเชื่อเลย

@@ -23,6 +23,14 @@ $lang['home_license_no'] = "บริษัท อินฟินิท ฟิ�
 $lang['home_license_check_btn'] = "ตรวจสอบใบอนุญาตประกอบธุรกิจสินเชื่อ";
 $lang['home_license_check_url'] = "https://www.1359.go.th/picodoc/pico_public/";
 
+// Floating Stat Badges
+$lang['stat_pico_title'] = "PICO Finance 100%";
+$lang['stat_pico_sub'] = "กระทรวงการคลังกำกับดูแล";
+$lang['stat_fast_title'] = "อนุมัติใน 30 นาที";
+$lang['stat_fast_sub'] = "ระบบ AI ประมวลผล";
+$lang['stat_amount_title'] = "วงเงินสูงสุด 50,000 บาท";
+$lang['stat_amount_sub'] = "ผ่อนชำระ 91 - 180 วัน";
+
 // Key Highlights
 $lang['highlights_title'] = "จุดเด่นของเรา";
 $lang['highlights_items'] = [
@@ -159,6 +167,7 @@ $lang['calc_example_subtitle'] = "(คำนวณแบบลดต้นลด
 $lang['calc_example_heading'] = "ตัวอย่างการคำนวณค่างวดสำหรับสินเชื่อรายย่อยระดับจังหวัด (PICO Finance)";
 $lang['calc_example_detail'] = "วงเงินสินเชื่อ: 10,000 บาท | อัตราดอกเบี้ย: 35.80% ต่อปี";
 $lang['calc_example_note'] = "หมายเหตุ: ตัวอย่างนี้จัดทำขึ้นเพื่อประกอบความเข้าใจในการคำนวณค่างวดแบบลดต้นลดดอกเท่านั้น การพิจารณาวงเงิน อัตราดอกเบี้ย และเงื่อนไขการผ่อนชำระจริง เป็นไปตามหลักเกณฑ์และเงื่อนไขของบริษัท";
+$lang['repayment_example_note'] = "หมายเหตุ: ตัวอย่างนี้จัดทำขึ้นเพื่อประกอบความเข้าใจในการคำนวณค่างวดแบบลดต้นลดดอกเท่านั้น การพิจารณาวงเงิน อัตราดอกเบี้ย และเงื่อนไขการผ่อนชำระจริง เป็นไปตามหลักเกณฑ์และเงื่อนไขของบริษัท";
 
 // Application Steps Page
 $lang['app_hero_title'] = "ขั้นตอนการสมัคร";

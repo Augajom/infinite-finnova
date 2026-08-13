@@ -16,11 +16,6 @@
 <body>
 <div class="main-wrapper">
 
-<?php if (empty($this->uri->segment(1)) || $this->uri->segment(1) == 'home'): ?>
-<!-- 3D Canvas Background Container (Home Page Only) -->
-<div id="three-hero-container"></div>
-<?php endif; ?>
-
 <!-- Redesigned Futuristic Floating Navbar -->
 <nav class="navbar navbar-expand-lg futuristic-nav" id="mainNavbar">
     <div class="container-fluid p-0">

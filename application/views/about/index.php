@@ -51,7 +51,7 @@
 </section>
 
 <!-- Why Choose Us (5 Cards) -->
-<section class="py-5 position-relative" style="z-index: 2; background: rgba(0, 0, 0, 0.2);">
+<section class="py-5 position-relative" style="z-index: 2; background: rgba(210, 207, 207, 0.2);">
     <div class="container-xxl">
         <div class="text-center mb-5">
             <h2 class="display-6 text-white fw-bold mb-2"><?= $this->lang->line('why_us_title'); ?></h2>

@@ -30,18 +30,18 @@
                     </div>
 
                     <!-- Address -->
-                    <div class="p-4 rounded-4 mb-4" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4 mb-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                         <span class="text-muted small d-block mb-1">
                             <i class="fas fa-location-dot text-info me-2"></i><?= $this->lang->line('contact_address_label'); ?>
                         </span>
-                        <h4 class="text-white mb-0 font-weight-bold" style="line-height: 1.7;">
+                        <p class="text-white mb-0 font-weight-bold" style="line-height: 1.7; font-size: 1.1rem !important;">
                             <?= $this->lang->line('contact_address_val'); ?>
-                        </h4>
+                        </p>
                     </div>
 
                     <!-- License Summary -->
-                    <div class="p-3 rounded-3 mb-4" style="background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3);">
-                        <div class="small text-white-50 mb-1">
+                    <div class="p-3 rounded-3 mb-4" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.22);">
+                        <div class="small text-muted mb-1">
                             <i class="fas fa-certificate text-info me-2"></i><?= $this->lang->line('home_license_no'); ?>
                         </div>
                         <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="small text-info fw-bold text-decoration-none">
@@ -70,7 +70,7 @@
                     </div>
 
                     <!-- Email Support -->
-                    <div class="p-4 rounded-4 mb-3 d-flex align-items-center gap-3" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4 mb-3 d-flex align-items-center gap-3" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                         <div class="badge rounded-circle bg-info bg-opacity-25 text-info p-3 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; min-width: 48px;">
                             <i class="fas fa-envelope"></i>
                         </div>
@@ -81,7 +81,7 @@
                     </div>
 
                     <!-- LINE Support -->
-                    <div class="p-4 rounded-4 mb-4 d-flex align-items-center gap-3" style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4 mb-4 d-flex align-items-center gap-3" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
                         <div class="badge rounded-circle bg-info bg-opacity-25 text-info p-3 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; min-width: 48px;">
                             <i class="fab fa-line text-success"></i>
                         </div>

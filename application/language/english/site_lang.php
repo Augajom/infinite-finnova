@@ -23,6 +23,14 @@ $lang['home_license_no'] = "Infinite Fintech Co., Ltd. operates under Ministry o
 $lang['home_license_check_btn'] = "Verify Business License";
 $lang['home_license_check_url'] = "https://www.1359.go.th/picodoc/pico_public/";
 
+// Floating Stat Badges
+$lang['stat_pico_title'] = "100% PICO Finance";
+$lang['stat_pico_sub'] = "Regulated by Ministry of Finance";
+$lang['stat_fast_title'] = "Approved in 30 Mins";
+$lang['stat_fast_sub'] = "AI Processing System";
+$lang['stat_amount_title'] = "Max Credit 50,000 THB";
+$lang['stat_amount_sub'] = "Repayment Term 91 - 180 Days";
+
 // Key Highlights
 $lang['highlights_title'] = "Our Highlights";
 $lang['highlights_items'] = [
@@ -159,6 +167,7 @@ $lang['calc_example_subtitle'] = "(Effective Rate Reducing Balance Calculation)"
 $lang['calc_example_heading'] = "Sample Installment Calculation for PICO Finance Retail Loan";
 $lang['calc_example_detail'] = "Credit Limit: 10,000 THB | Interest Rate: 35.80% Per Annum";
 $lang['calc_example_note'] = "Note: This illustration is provided for educational purposes regarding reducing balance calculations. Actual credit approval, interest rates, and loan terms are subject to company rules and conditions.";
+$lang['repayment_example_note'] = "Note: This illustration is provided for educational purposes regarding reducing balance calculations. Actual credit approval, interest rates, and loan terms are subject to company rules and conditions.";
 
 // Application Steps Page
 $lang['app_hero_title'] = "Application Steps";
