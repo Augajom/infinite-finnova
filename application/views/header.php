@@ -16,8 +16,8 @@
 <body>
 <div class="main-wrapper">
 
-<!-- Redesigned Futuristic Floating Navbar -->
-<nav class="navbar navbar-expand-xl futuristic-nav" id="mainNavbar">
+<!-- Redesigned Futuristic Floating Navbar (Custom 1250px Breakpoint) -->
+<nav class="navbar futuristic-nav" id="mainNavbar">
     <div class="container-fluid p-0">
         
         <!-- Brand Logo -->
