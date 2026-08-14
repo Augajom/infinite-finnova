@@ -62,9 +62,6 @@
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-<!-- Falling Banknotes Effect Script -->
-<script src="<?= base_url('assets/js/falling-banknotes.js') ?>"></script>
-
 <style>
 /* Scroll Reveal Fade-in Animations */
 .reveal-on-scroll {

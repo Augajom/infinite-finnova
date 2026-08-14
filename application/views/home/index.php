@@ -1,20 +1,20 @@
-<!-- Hero Section -->
-<section class="hero-section section-blurred-bg">
+<!-- Hero Section (Full 100vh Height & Ultra-Bright High-Contrast Text) -->
+<section class="hero-section hero-section-home section-blurred-bg position-relative d-flex align-items-center" style="min-height: 100vh; padding-top: 130px; padding-bottom: 60px; background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.82)), url('<?= base_url('assets/images/bg1.jpg') ?>') center center / cover no-repeat;">
     <!-- Animated Soft Aura Background Blobs -->
     <div class="hero-aura-blob-1"></div>
     <div class="hero-aura-blob-2"></div>
 
-    <div class="container-xxl position-relative" style="z-index: 2;">
-        <div class="row align-items-center g-5">
+    <div class="container-xxl position-relative w-100" style="z-index: 2;">
+        <div class="row align-items-center g-4 g-lg-5">
             
             <div class="col-lg-7">
-                <div class="badge-pico mb-3">
-                    <i class="fas fa-shield-check text-success"></i> <?= $this->lang->line('home_hero_subtitle'); ?>
+                <div class="badge-pico mb-3" style="background: rgba(16, 185, 129, 0.22); border: 1px solid #34d399; color: #34d399; font-weight: 700;">
+                    <i class="fas fa-shield-check me-1" style="color: #34d399;"></i> <?= $this->lang->line('home_hero_subtitle'); ?>
                 </div>
-                <h1 class="text-white fw-bold mb-3" style="line-height: 1.2; font-size: 2.1rem !important;">
+                <h1 class="fw-bold mb-3" style="color: #FFFFFF !important; line-height: 1.25; font-size: 2.2rem !important; text-shadow: 0 4px 15px rgba(0,0,0,0.7);">
                     <?= $this->lang->line('home_hero_title'); ?>
                 </h1>
-                <p class="lead text-slate mb-4 fs-5" style="max-width: 680px;">
+                <p class="lead mb-4 fs-5" style="color: #F8FAFC !important; max-width: 680px; text-shadow: 0 2px 10px rgba(0,0,0,0.8); font-weight: 500;">
                     <?= $this->lang->line('home_hero_desc'); ?>
                 </p>
 
@@ -22,7 +22,7 @@
                     <a href="<?= site_root_url('apply') ?>" class="btn-primary-3d">
                         <i class="fas fa-file-signature"></i> <?= $this->lang->line('btn_apply_loan'); ?>
                     </a>
-                    <a href="<?= site_root_url('apply') ?>" class="btn-outline-3d">
+                    <a href="<?= site_root_url('apply') ?>" class="btn-outline-3d" style="background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.4); color: #FFFFFF !important; font-weight: 700;">
                         <i class="fas fa-route"></i> <?= $this->lang->line('btn_apply_steps'); ?>
                     </a>
                 </div>
@@ -30,25 +30,25 @@
 
             <!-- License Banner Glass Card -->
             <div class="col-lg-5">
-                <div class="license-card">
+                <div class="license-card p-4 p-md-5 rounded-4" style="background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(56, 189, 248, 0.4); box-shadow: 0 15px 35px rgba(0, 0, 0, 0.55);">
                     <div class="d-flex align-items-center gap-3 mb-3">
-                        <div class="card-icon-wrapper mb-0" style="width: 50px; height: 50px; font-size: 1.3rem;">
+                        <div class="card-icon-wrapper mb-0" style="width: 50px; height: 50px; font-size: 1.3rem; background: rgba(56, 189, 248, 0.2); border-color: #38bdf8; color: #38bdf8;">
                             <i class="fas fa-certificate"></i>
                         </div>
                         <div>
-                            <h5 class="text-white mb-0 fw-bold"><?= $this->lang->line('company_fullname'); ?></h5>
-                            <span class="small text-success fw-bold">PICO Finance Provider</span>
+                            <h5 class="mb-0 fw-bold" style="color: #FFFFFF !important;"><?= $this->lang->line('company_fullname'); ?></h5>
+                            <span class="small fw-bold" style="color: #38BDF8 !important;">PICO Finance Provider</span>
                         </div>
                     </div>
-                    <p class="small text-slate mb-3">
+                    <p class="small mb-3" style="color: #F1F5F9 !important; line-height: 1.7; font-weight: 500;">
                         <?= $this->lang->line('home_company_intro'); ?>
                     </p>
-                    <div class="p-3 rounded-3 mb-3" style="background: rgba(2, 132, 199, 0.06); border: 1px dashed rgba(2, 132, 199, 0.3);">
-                        <div class="small text-white fw-bold mb-1">
-                            <i class="fas fa-file-contract text-emerald me-1"></i> <?= $this->lang->line('home_license_no'); ?>
+                    <div class="p-3 rounded-3 mb-3" style="background: rgba(56, 189, 248, 0.12); border: 1px dashed rgba(56, 189, 248, 0.45);">
+                        <div class="small fw-bold mb-1" style="color: #FFFFFF !important;">
+                            <i class="fas fa-file-contract me-1" style="color: #38BDF8;"></i> <?= $this->lang->line('home_license_no'); ?>
                         </div>
                     </div>
-                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-outline-success btn-sm w-100 rounded-pill py-2">
+                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-sm w-100 rounded-pill py-2 font-weight-bold" style="background: linear-gradient(135deg, #1415C7, #0284C7); color: #FFFFFF !important; border: none; box-shadow: 0 4px 15px rgba(20, 21, 199, 0.4);">
                         <i class="fas fa-external-link-alt me-1"></i> <?= $this->lang->line('home_license_check_btn'); ?>
                     </a>
                 </div>
@@ -59,35 +59,35 @@
         <!-- Floating Trust Metrics Badges (1 col 3 rows on mobile) -->
         <div class="row g-3 mt-4 pt-2">
             <div class="col-md-4 col-12">
-                <div class="floating-stat-badge d-flex align-items-center gap-3">
-                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                <div class="floating-stat-badge d-flex align-items-center gap-3 p-3 rounded-4" style="background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.35); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem; background: rgba(56, 189, 248, 0.2); border-color: #38bdf8; color: #38bdf8;">
                         <i class="fas fa-shield-halved"></i>
                     </div>
                     <div>
-                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_pico_title'); ?></h6>
-                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_pico_sub'); ?></span>
+                        <h6 class="fw-bold mb-0 fs-6" style="color: #FFFFFF !important;"><?= $this->lang->line('stat_pico_title'); ?></h6>
+                        <span class="small fw-bold" style="color: #38BDF8 !important; font-size: 0.84rem;"><?= $this->lang->line('stat_pico_sub'); ?></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-12">
-                <div class="floating-stat-badge d-flex align-items-center gap-3" style="animation-delay: 1.2s;">
-                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                <div class="floating-stat-badge d-flex align-items-center gap-3 p-3 rounded-4" style="animation-delay: 1.2s; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.35); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem; background: rgba(56, 189, 248, 0.2); border-color: #38bdf8; color: #38bdf8;">
                         <i class="fas fa-bolt"></i>
                     </div>
                     <div>
-                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_fast_title'); ?></h6>
-                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_fast_sub'); ?></span>
+                        <h6 class="fw-bold mb-0 fs-6" style="color: #FFFFFF !important;"><?= $this->lang->line('stat_fast_title'); ?></h6>
+                        <span class="small fw-bold" style="color: #38BDF8 !important; font-size: 0.84rem;"><?= $this->lang->line('stat_fast_sub'); ?></span>
                     </div>
                 </div>
             </div>
             <div class="col-md-4 col-12">
-                <div class="floating-stat-badge d-flex align-items-center gap-3" style="animation-delay: 2.4s;">
-                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
+                <div class="floating-stat-badge d-flex align-items-center gap-3 p-3 rounded-4" style="animation-delay: 2.4s; background: rgba(15, 23, 42, 0.88); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(56, 189, 248, 0.35); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.45);">
+                    <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem; background: rgba(56, 189, 248, 0.2); border-color: #38bdf8; color: #38bdf8;">
                         <i class="fas fa-hand-holding-dollar"></i>
                     </div>
                     <div>
-                        <h6 class="text-white fw-bold mb-0 fs-6"><?= $this->lang->line('stat_amount_title'); ?></h6>
-                        <span class="small text-muted" style="font-size: 0.82rem;"><?= $this->lang->line('stat_amount_sub'); ?></span>
+                        <h6 class="fw-bold mb-0 fs-6" style="color: #FFFFFF !important;"><?= $this->lang->line('stat_amount_title'); ?></h6>
+                        <span class="small fw-bold" style="color: #38BDF8 !important; font-size: 0.84rem;"><?= $this->lang->line('stat_amount_sub'); ?></span>
                     </div>
                 </div>
             </div>
