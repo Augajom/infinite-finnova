@@ -11,15 +11,17 @@
     </div>
 </section>
 
-<!-- Loan Specs & Conditions Block -->
+<!-- Main Services & Conditions Content -->
 <section class="py-5 position-relative" style="z-index: 2;">
     <div class="container-xxl">
+
+        <!-- Loan Overview & Specs Block (วงเงินการขอสินเชื่อ) -->
         <div class="card-3d p-4 p-md-5 mb-5">
             <div class="row align-items-center g-4">
                 <div class="col-lg-7">
                     <span class="badge bg-info bg-opacity-25 text-info mb-2 px-3 py-2 rounded-pill fw-bold">PICO Finance</span>
                     <h2 class="display-6 text-white fw-bold mb-3"><?= $this->lang->line('pico_title'); ?></h2>
-                    <p class="text-slate fs-5 mb-4" style="line-height: 1.8;"><?= $this->lang->line('srv_main_desc'); ?></p>
+                    <p class="text-slate fs-5 mb-4" style="line-height: 1.8; white-space: pre-line;"><?= nl2br($this->lang->line('srv_main_desc')); ?></p>
                     
                     <div class="d-flex flex-wrap gap-3">
                         <a href="<?= site_root_url('apply') ?>" class="btn-primary-3d">
@@ -58,7 +60,31 @@
             </div>
         </div>
 
-        <!-- Qualifications & Documents Grid -->
+        <!-- Why Choose Us Grid (ทำไมต้องเลือกสินเชื่อของเรา?) -->
+        <div class="mb-5">
+            <div class="text-center mb-4">
+                <h2 class="display-6 text-white fw-bold mb-2"><?= $this->lang->line('why_loan_title'); ?></h2>
+                <div class="mx-auto" style="width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary-blue), var(--primary-glow)); border-radius: 2px;"></div>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+                <?php $why_features = $this->lang->line('why_loan_features'); ?>
+                <?php $why_icons = ['fa-scale-balanced', 'fa-bolt', 'fa-clock-rotate-left', 'fa-hand-holding-dollar', 'fa-sliders']; ?>
+                <?php if (!empty($why_features)): foreach ($why_features as $w_idx => $w_feat): ?>
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card-3d p-4 h-100">
+                            <div class="card-icon-wrapper mb-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
+                                <i class="fas <?= isset($why_icons[$w_idx]) ? $why_icons[$w_idx] : 'fa-check'; ?>"></i>
+                            </div>
+                            <h5 class="text-white fw-bold fs-5 mb-2"><?= $w_feat['title']; ?></h5>
+                            <p class="text-slate small mb-0" style="line-height: 1.7;"><?= $w_feat['desc']; ?></p>
+                        </div>
+                    </div>
+                <?php endforeach; endif; ?>
+            </div>
+        </div>
+
+        <!-- Qualifications & Documents Grid (คุณสมบัติผู้สมัคร & เอกสารที่ต้องใช้) -->
         <div class="row g-4 mb-5">
             <!-- Qualifications -->
             <div class="col-lg-6">
@@ -105,20 +131,21 @@
             </div>
         </div>
 
-        <!-- Fast Approval Features (5 Points) -->
+        <!-- Fast Approval Features (อนุมัติรวดเร็ว 5 ข้อ) -->
         <div class="text-center mb-4">
             <h2 class="display-6 text-white fw-bold mb-2"><?= $this->lang->line('fast_approval_title'); ?></h2>
+            <p class="text-slate fs-6 max-w-800 mx-auto mb-3"><?= $this->lang->line('fast_approval_subtitle'); ?></p>
             <div class="mx-auto" style="width: 60px; height: 4px; background: linear-gradient(90deg, var(--primary-blue), var(--primary-glow)); border-radius: 2px;"></div>
         </div>
 
         <div class="row g-4 mb-5">
             <?php $features = $this->lang->line('fast_approval_items'); ?>
-            <?php $icons = ['fa-scale-balanced', 'fa-bolt', 'fa-clock-rotate-left', 'fa-hand-holding-dollar', 'fa-sliders']; ?>
-            <?php if (!empty($features)): foreach ($features as $index => $feat): ?>
-                <div class="col-lg-4 col-md-6">
+            <?php $f_icons = ['fa-coins', 'fa-sliders', 'fa-shield-halved', 'fa-wallet', 'fa-circle-check']; ?>
+            <?php if (!empty($features)): foreach ($features as $f_idx => $feat): ?>
+                <div class="<?= ($f_idx < 3) ? 'col-lg-4 col-md-6' : 'col-lg-6 col-md-6'; ?>">
                     <div class="card-3d p-4 h-100">
                         <div class="card-icon-wrapper mb-3" style="width: 50px; height: 50px; font-size: 1.2rem;">
-                            <i class="fas <?= isset($icons[$index]) ? $icons[$index] : 'fa-check'; ?>"></i>
+                            <i class="fas <?= isset($f_icons[$f_idx]) ? $f_icons[$f_idx] : 'fa-check'; ?>"></i>
                         </div>
                         <h5 class="text-white fw-bold fs-5 mb-2"><?= $feat['title']; ?></h5>
                         <p class="text-slate small mb-0" style="line-height: 1.7;"><?= $feat['desc']; ?></p>
@@ -127,7 +154,7 @@
             <?php endforeach; endif; ?>
         </div>
 
-        <!-- Calculation Example Image Viewer Section -->
+        <!-- Calculation Example Image Viewer Section (Unchanged) -->
         <div class="card-3d p-4 p-md-5">
             <div class="text-center mb-4">
                 <h3 class="text-white fw-bold mb-1"><?= $this->lang->line('calc_example_title'); ?></h3>
