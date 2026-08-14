@@ -65,17 +65,60 @@
 <!-- Falling Banknotes Effect Script -->
 <script src="<?= base_url('assets/js/falling-banknotes.js') ?>"></script>
 
-<!-- Navbar Scroll Effect Script -->
+<style>
+/* Scroll Reveal Fade-in Animations */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(35px);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: opacity, transform;
+}
+.reveal-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+</style>
+
+<!-- Navbar Scroll Effect & IntersectionObserver Scroll Reveal Script -->
 <script>
 document.addEventListener('DOMContentLoaded', () => {
+    // 1. Navbar Scrolled State
     const nav = document.getElementById('mainNavbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 30) {
-            nav.classList.add('scrolled');
-        } else {
-            nav.classList.remove('scrolled');
+    if (nav) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 30) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    }
+
+    // 2. IntersectionObserver Scroll Reveal Fade-in Effect
+    const revealTargets = document.querySelectorAll('.card-3d, section h1, section h2, .accordion-item, .hero-section .text-center, .reveal-on-scroll');
+    
+    revealTargets.forEach(el => {
+        if (!el.classList.contains('reveal-on-scroll')) {
+            el.classList.add('reveal-on-scroll');
         }
     });
+
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px 0px -40px 0px',
+        threshold: 0.12
+    };
+
+    const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    revealTargets.forEach(el => observer.observe(el));
 });
 </script>
 

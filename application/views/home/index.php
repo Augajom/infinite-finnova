@@ -26,11 +26,6 @@
                         <i class="fas fa-route"></i> <?= $this->lang->line('btn_apply_steps'); ?>
                     </a>
                 </div>
-
-                <!-- Service Area Pill -->
-                <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill" style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); color: var(--accent-gold);">
-                    <i class="fas fa-map-pin"></i> <span class="small font-weight-bold"><?= $this->lang->line('area_limit_desc'); ?></span>
-                </div>
             </div>
 
             <!-- License Banner Glass Card -->
@@ -61,9 +56,9 @@
 
         </div>
 
-        <!-- Floating Trust Metrics Badges -->
+        <!-- Floating Trust Metrics Badges (1 col 3 rows on mobile) -->
         <div class="row g-3 mt-4 pt-2">
-            <div class="col-md-4 col-6">
+            <div class="col-md-4 col-12">
                 <div class="floating-stat-badge d-flex align-items-center gap-3">
                     <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
                         <i class="fas fa-shield-halved"></i>
@@ -74,7 +69,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-4 col-6">
+            <div class="col-md-4 col-12">
                 <div class="floating-stat-badge d-flex align-items-center gap-3" style="animation-delay: 1.2s;">
                     <div class="card-icon-wrapper mb-0" style="width: 44px; height: 44px; font-size: 1.1rem;">
                         <i class="fas fa-bolt"></i>
