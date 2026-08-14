@@ -183,15 +183,16 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 50px;
     padding: 3px;
     position: relative;
-    width: 84px;
+    width: 80px;
     height: 36px;
+    flex-shrink: 0;
 }
 
 .lang-toggle-pill .slider {
     position: absolute;
     top: 3px;
     left: 3px;
-    width: 38px;
+    width: 36px;
     height: 28px;
     background: linear-gradient(135deg, var(--primary-blue), var(--accent-purple));
     border-radius: 50px;
@@ -200,11 +201,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .lang-toggle-pill.en .slider {
-    transform: translateX(0);
+    transform: translateX(0) !important;
 }
 
 .lang-toggle-pill.th .slider {
-    transform: translateX(40px);
+    transform: translateX(36px) !important;
 }
 
 .lang-toggle-pill a {
@@ -724,12 +725,79 @@ h1, h2, h3, h4, h5, h6 {
     .futuristic-nav .navbar-toggler {
         display: none !important;
     }
+    .futuristic-nav .container-fluid {
+        flex-wrap: nowrap !important;
+    }
     .futuristic-nav .navbar-collapse {
         display: flex !important;
+        flex-basis: auto !important;
+        flex-grow: 1 !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+        background: transparent !important;
+        border: none !important;
+        padding: 0 !important;
+        margin-top: 0 !important;
+        flex-wrap: nowrap !important;
     }
-}
-    .hero-section {
-        padding-top: 135px;
+    .futuristic-nav .navbar-nav {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        gap: clamp(2px, 0.4vw, 6px) !important;
+        margin-bottom: 0 !important;
+        flex-wrap: nowrap !important;
+    }
+    .futuristic-nav .nav-item {
+        width: auto !important;
+        white-space: nowrap !important;
+    }
+    .futuristic-nav .nav-link-custom {
+        display: inline-flex !important;
+        align-items: center !important;
+        width: auto !important;
+        padding: 6px clamp(6px, 0.75vw, 12px) !important;
+        font-size: clamp(0.82rem, 0.85vw, 0.92rem) !important;
+        white-space: nowrap !important;
+        background: transparent !important;
+        border: none !important;
+        border-radius: var(--radius-sm) !important;
+        color: #475569 !important;
+    }
+    .futuristic-nav .nav-link-custom:hover,
+    .futuristic-nav .nav-link-custom.active {
+        background: linear-gradient(135deg, rgba(2, 132, 199, 0.1), rgba(124, 58, 237, 0.1)) !important;
+        color: var(--accent-purple) !important;
+    }
+    .futuristic-nav .d-flex.align-items-center {
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        width: auto !important;
+        margin-top: 0 !important;
+        gap: clamp(6px, 0.8vw, 12px) !important;
+    }
+    .futuristic-nav .lang-toggle-pill {
+        width: 80px !important;
+        height: 36px !important;
+        position: relative !important;
+        flex-shrink: 0 !important;
+    }
+    .futuristic-nav .lang-toggle-pill .slider {
+        position: absolute !important;
+        top: 3px !important;
+        left: 3px !important;
+        width: 36px !important;
+        height: 28px !important;
+    }
+    .futuristic-nav .btn-primary-3d {
+        width: auto !important;
+        padding: 6px 14px !important;
+        font-size: clamp(0.82rem, 0.85vw, 0.9rem) !important;
+        white-space: nowrap !important;
+        flex-shrink: 0 !important;
     }
 }
 
