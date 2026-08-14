@@ -30,7 +30,7 @@
                     </div>
 
                     <!-- Address -->
-                    <div class="p-4 rounded-4 mb-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4 mb-4" style="background: rgba(20, 21, 199, 0.04); border: 1px solid var(--border-glass);">
                         <span class="text-muted small d-block mb-1">
                             <i class="fas fa-location-dot text-info me-2"></i><?= $this->lang->line('contact_address_label'); ?>
                         </span>
@@ -60,7 +60,7 @@
                     </div>
 
                     <!-- Email Support -->
-                    <div class="p-4 rounded-4 mb-3 d-flex align-items-center gap-3" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4 mb-3 d-flex align-items-center gap-3" style="background: rgba(20, 21, 199, 0.04); border: 1px solid var(--border-glass);">
                         <div class="badge rounded-circle bg-info bg-opacity-25 text-info p-3 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; min-width: 48px;">
                             <i class="fas fa-envelope"></i>
                         </div>

@@ -48,7 +48,7 @@
                             <i class="fas fa-file-contract me-1" style="color: #38BDF8;"></i> <?= $this->lang->line('home_license_no'); ?>
                         </div>
                     </div>
-                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-sm w-100 rounded-pill py-2 font-weight-bold" style="background: linear-gradient(135deg, #1415C7, #0284C7); color: #FFFFFF !important; border: none; box-shadow: 0 4px 15px rgba(20, 21, 199, 0.4);">
+                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-sm w-100 rounded-pill py-2 font-weight-bold" style="background: linear-gradient(135deg, #0252CD, #0284C7); color: #FFFFFF !important; border: none; box-shadow: 0 4px 15px rgba(2, 82, 205, 0.4);">
                         <i class="fas fa-external-link-alt me-1"></i> <?= $this->lang->line('home_license_check_btn'); ?>
                     </a>
                 </div>
@@ -195,14 +195,14 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.22); box-shadow: 0 10px 30px rgba(2, 132, 199, 0.08);">
+                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(20, 21, 199, 0.08), rgba(101, 238, 255, 0.08)); border: 1px solid rgba(20, 21, 199, 0.22); box-shadow: 0 10px 30px rgba(20, 21, 199, 0.08);">
                         <div class="text-center mb-4">
                             <span class="text-muted small"><?= $this->lang->line('calc_max_interest_label'); ?></span>
                             <h1 class="display-5 text-success fw-bold my-2" id="calcInterestVal">892.49 <?= $this->lang->line('unit_baht'); ?></h1>
                             <span class="text-slate small"><?= $this->lang->line('calc_total_repayment_label'); ?> <strong class="text-white" id="calcTotalVal">10,892.49 <?= $this->lang->line('unit_baht'); ?></strong></span>
                         </div>
 
-                        <hr style="border-color: rgba(124, 58, 237, 0.15);">
+                        <hr style="border-color: rgba(20, 21, 199, 0.15);">
 
                         <a href="<?= site_root_url('apply') ?>" class="btn-primary-3d w-100 justify-content-center">
                             <i class="fas fa-paper-plane me-2"></i> <?= $this->lang->line('btn_apply_now'); ?>

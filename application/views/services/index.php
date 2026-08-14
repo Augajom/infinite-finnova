@@ -34,8 +34,8 @@
                 </div>
 
                 <div class="col-lg-5">
-                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.2);">
-                        <h4 class="text-white fw-bold mb-3 border-bottom pb-2" style="border-color: rgba(124, 58, 237, 0.15) !important;">
+                    <div class="p-4 rounded-4" style="background: linear-gradient(135deg, rgba(20, 21, 199, 0.08), rgba(101, 238, 255, 0.08)); border: 1px solid rgba(20, 21, 199, 0.2);">
+                        <h4 class="text-white fw-bold mb-3 border-bottom pb-2" style="border-color: rgba(20, 21, 199, 0.15) !important;">
                             <i class="fas fa-circle-info text-info me-2"></i><?= $this->lang->line('srv_specs_title'); ?>
                         </h4>
                         
@@ -52,7 +52,7 @@
                             </li>
                         </ul>
 
-                        <div class="small text-muted border-top pt-3" style="border-color: rgba(124, 58, 237, 0.15) !important;">
+                        <div class="small text-muted border-top pt-3" style="border-color: rgba(20, 21, 199, 0.15) !important;">
                             <?= $specs['rate_note']; ?>
                         </div>
                     </div>

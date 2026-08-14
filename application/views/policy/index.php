@@ -73,7 +73,7 @@
                         <?= nl2br($this->lang->line('privacy_intro')); ?>
                     </p>
 
-                    <div class="p-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4" style="background: rgba(20, 21, 199, 0.04); border: 1px solid var(--border-glass);">
                         <!-- Privacy Accordion Header & Controls -->
                         <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
                             <h5 class="text-white fw-bold mb-0">
@@ -149,7 +149,7 @@
                         <?= nl2br($this->lang->line('terms_intro')); ?>
                     </p>
 
-                    <div class="p-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                    <div class="p-4 rounded-4" style="background: rgba(20, 21, 199, 0.04); border: 1px solid var(--border-glass);">
                         <h5 class="text-white fw-bold mb-3"><?= $this->lang->line('terms_eligible_title'); ?>:</h5>
                         <ul class="text-slate mb-4 fs-6">
                             <?php $eligible_items = $this->lang->line('terms_eligible_items'); ?>

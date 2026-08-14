@@ -43,15 +43,15 @@
     --font-primary: 'LINESeedSansTH', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-secondary: 'LINESeedSansTH', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     
-    /* Brand Theme Palette: #1415C7 (Royal Cobalt), #65EEFF (Electric Cyan), White (#FFFFFF) */
+    /* Brand Theme Palette: #0252CD (Pure Royal Ocean Blue), #65EEFF (Electric Cyan), White (#FFFFFF) */
     --bg-dark: #F4F8FC;
     --bg-card: #FFFFFF;
     --bg-card-hover: #FFFFFF;
-    --bg-glass: rgba(20, 21, 199, 0.04);
+    --bg-glass: rgba(2, 82, 205, 0.04);
     
-    --primary-blue: #1415C7;
-    --primary-glow: #0F10A6;
-    --accent-purple: #1415C7;
+    --primary-blue: #0252CD;
+    --primary-glow: #013CA7;
+    --accent-purple: #0252CD;
     --accent-purple-glow: #65EEFF;
     --accent-cyan: #65EEFF;
     --accent-gold: #0284C7;
@@ -60,7 +60,7 @@
     --text-slate: #334155; /* Dark body text in Light Theme */
     --text-muted: #64748B;
     
-    --border-glass: rgba(20, 21, 199, 0.15);
+    --border-glass: rgba(2, 82, 205, 0.15);
     --border-glow: rgba(101, 238, 255, 0.45);
     
     --radius-sm: 8px;
@@ -68,7 +68,7 @@
     --radius-lg: 24px;
     --radius-xl: 32px;
     
-    --shadow-3d: 0 15px 35px -5px rgba(20, 21, 199, 0.14), 0 0 25px 0 rgba(101, 238, 255, 0.18);
+    --shadow-3d: 0 15px 35px -5px rgba(2, 82, 205, 0.14), 0 0 25px 0 rgba(101, 238, 255, 0.18);
 }
 
 body {
@@ -349,7 +349,7 @@ h1, h2, h3, h4, h5, h6 {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    background: linear-gradient(135deg, #1415C7, #0284C7);
+    background: linear-gradient(135deg, #0252CD, #0284C7);
     color: #FFFFFF !important;
     font-weight: 700;
     padding: 12px 28px;
@@ -357,14 +357,14 @@ h1, h2, h3, h4, h5, h6 {
     border: none;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 24px rgba(20, 21, 199, 0.3);
+    box-shadow: 0 8px 24px rgba(2, 82, 205, 0.3);
 }
 
 .btn-primary-3d:hover {
-    background: linear-gradient(135deg, #0F10A6, #1415C7);
+    background: linear-gradient(135deg, #013CA7, #0252CD);
     color: #FFFFFF !important;
     transform: translateY(-2px);
-    box-shadow: 0 12px 28px rgba(20, 21, 199, 0.4);
+    box-shadow: 0 12px 28px rgba(2, 82, 205, 0.4);
 }
 
 .btn-outline-3d {

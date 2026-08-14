@@ -60,7 +60,7 @@
                             $center_class = $is_last_odd ? 'justify-content-center text-center' : '';
                             ?>
                             <div class="<?= $col_class; ?>">
-                                <div class="p-3 rounded-3 d-flex align-items-center gap-3 <?= $center_class; ?>" style="background: rgba(124, 58, 237, 0.05); border: 1px solid rgba(124, 58, 237, 0.2);">
+                                <div class="p-3 rounded-3 d-flex align-items-center gap-3 <?= $center_class; ?>" style="background: rgba(20, 21, 199, 0.05); border: 1px solid rgba(20, 21, 199, 0.2);">
                                     <div class="badge rounded-circle bg-info text-white p-2" style="width: 34px; height: 34px; display: flex; align-items: center; justify-content: center; min-width: 34px; font-weight: 700; font-size: 0.95rem; color: #FFFFFF !important;">
                                         <?= $index + 1; ?>
                                     </div>
@@ -70,7 +70,7 @@
                         <?php endforeach; endif; ?>
                     </div>
 
-                    <div class="alert border-0 rounded-4 text-slate small mt-4 mb-0" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.2) !important;">
+                    <div class="alert border-0 rounded-4 text-slate small mt-4 mb-0" style="background: rgba(20, 21, 199, 0.06); border: 1px solid rgba(20, 21, 199, 0.2) !important;">
                         <i class="fas fa-circle-info text-warning me-1"></i>
                         <?= $this->lang->line('prep_notice'); ?>
                     </div>
@@ -90,7 +90,7 @@
                 <?php if (!empty($steps)): foreach ($steps as $index => $step): ?>
                     <div class="d-flex align-items-center gap-3 mb-3">
                         <div class="step-number-pill"><?= $index + 1; ?></div>
-                        <div class="p-3 p-md-4 rounded-4 flex-grow-1" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.18); box-shadow: 0 4px 15px rgba(2, 132, 199, 0.06);">
+                        <div class="p-3 p-md-4 rounded-4 flex-grow-1" style="background: #FFFFFF; border: 1px solid rgba(20, 21, 199, 0.18); box-shadow: 0 4px 15px rgba(20, 21, 199, 0.06);">
                             <h5 class="text-white fw-bold mb-0 fs-5"><?= $step; ?></h5>
                         </div>
                     </div>
@@ -98,7 +98,7 @@
             </div>
 
             <!-- Download CTA -->
-            <div class="text-center mt-5 p-4 p-md-5 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.22);">
+            <div class="text-center mt-5 p-4 p-md-5 rounded-4" style="background: linear-gradient(135deg, rgba(20, 21, 199, 0.08), rgba(101, 238, 255, 0.08)); border: 1px solid rgba(20, 21, 199, 0.22);">
                 <h4 class="text-white fw-bold mb-2 fs-3"><?= $this->lang->line('app_download_title'); ?></h4>
                 <p class="text-slate mb-4 fs-5"><?= $this->lang->line('app_download_sub'); ?></p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
