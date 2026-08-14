@@ -14,15 +14,6 @@
 <!-- Tab Navigation & Content Section -->
 <section class="py-5 position-relative" style="z-index: 2;">
     <div class="container-xxl">
-        
-        <!-- Service Area Limitation Notice -->
-        <div class="alert alert-warning border-0 rounded-4 p-4 mb-5 d-flex align-items-center gap-3" style="background: rgba(245, 158, 11, 0.12); border: 1px solid rgba(245, 158, 11, 0.35) !important;">
-            <div class="fs-2 text-warning"><i class="fas fa-map-location-dot"></i></div>
-            <div>
-                <h5 class="text-warning fw-bold mb-1"><?= $this->lang->line('area_limit_title'); ?></h5>
-                <p class="text-white mb-0 fs-6"><?= $this->lang->line('area_limit_desc'); ?></p>
-            </div>
-        </div>
 
         <!-- Pills Header -->
         <div class="text-center mb-5">
@@ -78,39 +69,72 @@
                     <h3 class="text-white fw-bold mb-4 border-start border-4 border-info ps-3">
                         <?= $this->lang->line('privacy_heading'); ?>
                     </h3>
-                    <p class="text-slate fs-5 mb-4" style="line-height: 1.85;">
-                        <?= $this->lang->line('privacy_intro'); ?>
+                    <p class="text-slate fs-6 mb-4" style="line-height: 1.85;">
+                        <?= nl2br($this->lang->line('privacy_intro')); ?>
                     </p>
 
-                    <div class="p-4 rounded-4 mb-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec1_title'); ?></h5>
-                        <p class="text-slate mb-2 small"><?= $this->lang->line('privacy_sec1_intro'); ?></p>
-                        <ul class="text-slate small mb-4">
-                            <?php $sec1_items = $this->lang->line('privacy_sec1_items'); ?>
-                            <?php if (!empty($sec1_items)): foreach ($sec1_items as $item): ?>
-                                <li><?= $item; ?></li>
-                            <?php endforeach; endif; ?>
-                        </ul>
+                    <div class="p-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                        <!-- Privacy Accordion Header & Controls -->
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                            <h5 class="text-white fw-bold mb-0">
+                                <i class="fas fa-shield-halved text-info me-2"></i><?= $this->lang->line('privacy_heading'); ?>
+                            </h5>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-3 py-1 fs-7" id="btnExpandAllPrivacy">
+                                    <i class="fas fa-angles-down me-1"></i> <?= $this->lang->line('agreement_expand_all'); ?>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fs-7" id="btnCollapseAllPrivacy">
+                                    <i class="fas fa-angles-up me-1"></i> <?= $this->lang->line('agreement_collapse_all'); ?>
+                                </button>
+                            </div>
+                        </div>
 
-                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec2_title'); ?></h5>
-                        <p class="text-slate mb-2 small"><?= $this->lang->line('privacy_sec2_intro'); ?></p>
-                        <ul class="text-slate small mb-4">
-                            <?php $sec2_items = $this->lang->line('privacy_sec2_items'); ?>
-                            <?php if (!empty($sec2_items)): foreach ($sec2_items as $item): ?>
-                                <li><?= $item; ?></li>
-                            <?php endforeach; endif; ?>
-                        </ul>
+                        <!-- Privacy Accordion Container -->
+                        <div class="accordion custom-accordion d-flex flex-column gap-3 mb-0" id="accordionPrivacyPolicy">
+                            <?php 
+                            $privacy_items = $this->lang->line('privacy_accordion_items');
+                            if (!empty($privacy_items)):
+                                foreach ($privacy_items as $p_index => $p_item):
+                            ?>
+                                <div class="accordion-item rounded-4 overflow-hidden border-0" style="border: 1px solid rgba(56, 189, 248, 0.2) !important;">
+                                    <h2 class="accordion-header" id="headingPrivacy<?= $p_index + 1; ?>">
+                                        <button class="accordion-button collapsed bg-transparent text-white fw-bold fs-6 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapsePrivacy<?= $p_index + 1; ?>" aria-expanded="false" aria-controls="collapsePrivacy<?= $p_index + 1; ?>">
+                                            <span class="badge bg-info bg-opacity-25 text-info me-2"><?= $p_item['badge']; ?></span>
+                                            <?= $p_item['title']; ?>
+                                        </button>
+                                    </h2>
+                                    <div id="collapsePrivacy<?= $p_index + 1; ?>" class="accordion-collapse collapse" aria-labelledby="headingPrivacy<?= $p_index + 1; ?>" data-bs-parent="#accordionPrivacyPolicy">
+                                        <div class="accordion-body text-slate fs-6 pt-0" style="line-height: 1.8;">
+                                            <?= $p_item['body']; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php 
+                                endforeach;
+                            endif; 
+                            ?>
+                        </div>
 
-                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec3_title'); ?></h5>
-                        <ul class="text-slate small mb-4">
-                            <?php $sec3_items = $this->lang->line('privacy_sec3_items'); ?>
-                            <?php if (!empty($sec3_items)): foreach ($sec3_items as $item): ?>
-                                <li><?= $item; ?></li>
-                            <?php endforeach; endif; ?>
-                        </ul>
-
-                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec4_title'); ?></h5>
-                        <p class="text-slate small mb-0"><?= $this->lang->line('privacy_sec4_desc'); ?></p>
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var btnExpandP = document.getElementById('btnExpandAllPrivacy');
+                            var btnCollapseP = document.getElementById('btnCollapseAllPrivacy');
+                            if (btnExpandP && btnCollapseP) {
+                                btnExpandP.addEventListener('click', function() {
+                                    document.querySelectorAll('#accordionPrivacyPolicy .accordion-collapse').forEach(function(el) {
+                                        var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                        bsCollapse.show();
+                                    });
+                                });
+                                btnCollapseP.addEventListener('click', function() {
+                                    document.querySelectorAll('#accordionPrivacyPolicy .accordion-collapse').forEach(function(el) {
+                                        var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                        bsCollapse.hide();
+                                    });
+                                });
+                            }
+                        });
+                        </script>
                     </div>
                 </div>
             </div>

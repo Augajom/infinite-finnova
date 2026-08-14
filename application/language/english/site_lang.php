@@ -246,31 +246,55 @@ $lang['gov_dbd_desc'] = "The company has obtained the DBD Registered mark from t
 
 // Privacy Policy
 $lang['privacy_heading'] = "Privacy Policy & Personal Data Protection";
-$lang['privacy_intro'] = "INFINITE FINTECH CO., LTD. (\"Company\" or \"we\") attaches great importance to personal data protection of Ounjai Cash application users, strictly adhering to principles of transparency, security, and compliance with applicable laws.";
+$lang['privacy_intro'] = "INFINITE FINTECH CO., LTD. (\"Company\" or \"we\") attaches great importance to personal data protection of Ounjai Cash application users, strictly adhering to principles of transparency, security, and compliance with applicable laws under PDPA.\n\nUsing Ounjai Cash app signifies that you have read, understood, and consented to company collecting, using, and processing your personal data.\n\nCompany will collect and use personal data only as necessary under lawful purposes and will not disclose to third parties without consent.";
 
-$lang['privacy_sec1_title'] = "1. Collection of Personal Data";
-$lang['privacy_sec1_intro'] = "We collect your personal data for the purpose of improving application services for maximum efficiency as follows:";
-$lang['privacy_sec1_items'] = [
-    "Identity Information (First Name, Last Name)",
-    "Contact Information (Email, Phone Number)",
-    "Technical Information (IP Address, Cookies)"
+$lang['privacy_accordion_items'] = [
+    [
+        'badge' => 'Section 1',
+        'title' => 'Personal Data Collection',
+        'body' => 'We collect personal data to optimize app services:<br>- Identity Info (First/Last Name)<br>- Contact Info (Email, Phone Number)<br>- Technical Info (IP Address, Cookies)'
+    ],
+    [
+        'badge' => 'Section 2',
+        'title' => 'Purpose of Data Processing',
+        'body' => 'Used under consent base to:<br>- Verify user identity<br>- Analyze user behavior to develop new features<br>- Send push notifications related to service'
+    ],
+    [
+        'badge' => 'Section 3',
+        'title' => 'Data Subject Rights (PDPA)',
+        'body' => 'Under PDPA law, you have rights to access, rectify, transfer data or withdraw consent anytime via app Settings.'
+    ],
+    [
+        'badge' => 'Section 4',
+        'title' => 'Legal Privacy Notice & Scope',
+        'body' => 'This privacy notice is established under data protection laws to clarify data processing methods by Ounjai Cash app (Data Controller).'
+    ],
+    [
+        'badge' => 'Section 5',
+        'title' => 'Purpose, Scope & Consent Authorization',
+        'body' => 'By using Ounjai Cash, you freely and clearly consent to collection, use, and processing of personal data.'
+    ],
+    [
+        'badge' => 'Section 6',
+        'title' => 'User Rights',
+        'body' => 'You have rights to inspect, edit, erase, or restrict processing of your personal data at any time via Customer Support.'
+    ],
+    [
+        'badge' => 'Section 7',
+        'title' => 'Data We Collect (Identity, Work & Financial)',
+        'body' => 'Includes identity data (Name, DOB, Gender, Country, Phone, Email, Emergency Contact, Occupation, Education, ID Doc, Account info, Biometrics) and employment/financial data.'
+    ],
+    [
+        'badge' => 'Section 8',
+        'title' => 'Data Storage & Security Protection',
+        'body' => 'All data is protected by 256-bit SSL certificate and transmitted via encrypted https connection to secure servers.'
+    ],
+    [
+        'badge' => 'Section 9',
+        'title' => 'Cookies',
+        'body' => 'Cookies are small text files stored on your device to serve as anonymous unique identifiers.'
+    ]
 ];
-
-$lang['privacy_sec2_title'] = "2. Purpose of Data Processing";
-$lang['privacy_sec2_intro'] = "The company will use your information under consent base or other legal bases to:";
-$lang['privacy_sec2_items'] = [
-    "Verify identity when accessing the application",
-    "Analyze user behavior to develop new features",
-    "Send Push Notifications related to services"
-];
-
-$lang['privacy_sec3_title'] = "3. Rights of the Data Subject";
-$lang['privacy_sec3_items'] = [
-    "Under PDPA law, you have the right to request access, correction, transfer of data, or withdraw consent anytime via 'Settings' menu in application"
-];
-
-$lang['privacy_sec4_title'] = "Data Storage and Protection";
-$lang['privacy_sec4_desc'] = "All data will be protected with 256-bit SSL security certificate and sent through encrypted https connection to our servers";
 
 // Terms of Service
 $lang['terms_heading'] = "Terms of Service";
