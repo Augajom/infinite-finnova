@@ -1,5 +1,5 @@
 <!-- About Hero -->
-<section class="hero-section" style="padding-top: 140px; padding-bottom: 60px;">
+<section class="hero-section " style="padding-top: 140px; padding-bottom: 60px;">
     <div class="container-xxl">
         <div class="text-center max-w-800 mx-auto">
             <span class="badge-pico mb-3">
@@ -63,14 +63,16 @@
             <?php if (!empty($why_cards)): ?>
                 <?php foreach ($why_cards as $card): ?>
                     <div class="col-lg-4 col-md-6">
-                        <div class="card-3d">
-                            <div class="card-icon-wrapper">
+                        <div class="card-3d d-flex align-items-center gap-3 p-4">
+                            <div class="card-icon-wrapper mb-0" style="width: 48px; height: 48px; min-width: 48px; font-size: 1.2rem;">
                                 <i class="fas <?= $card['icon']; ?>"></i>
                             </div>
-                            <h4 class="text-white mb-2 fw-bold fs-4"><?= $card['title']; ?></h4>
-                            <p class="text-slate mb-0 small" style="line-height: 1.7;">
-                                <?= $card['desc']; ?>
-                            </p>
+                            <div>
+                                <h5 class="text-white mb-0 fw-bold fs-5"><?= $card['title']; ?></h5>
+                                <?php if (!empty($card['desc'])): ?>
+                                    <p class="text-slate mb-0 small mt-1" style="line-height: 1.7;"><?= $card['desc']; ?></p>
+                                <?php endif; ?>
+                            </div>
                         </div>
                     </div>
                 <?php endforeach; ?>

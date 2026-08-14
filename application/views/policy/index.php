@@ -57,8 +57,8 @@
                     <p class="text-slate fs-5 whitespace-pre-line mb-4" style="line-height: 1.85;">
                         <?= $this->lang->line('gov_lic_desc'); ?>
                     </p>
-                    <a href="https://www.1359.go.th/picodoc/pico_public/" target="_blank" class="btn btn-outline-success rounded-pill px-4 py-2 mb-5">
-                        <i class="fas fa-external-link-alt me-2"></i> ตรวจสอบใบอนุญาตบนเว็บไซต์กระทรวงการคลัง (1359.go.th)
+                    <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-outline-success rounded-pill px-4 py-2 mb-5">
+                        <i class="fas fa-external-link-alt me-2"></i> <?= $this->lang->line('home_license_check_btn'); ?>
                     </a>
 
                     <hr class="my-5" style="border-color: rgba(255, 255, 255, 0.1);">
@@ -82,28 +82,35 @@
                         <?= $this->lang->line('privacy_intro'); ?>
                     </p>
 
-                    <div class="row g-4 my-3">
-                        <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                                <i class="fas fa-database text-info fs-3 mb-3"></i>
-                                <h5 class="text-white fw-bold">1. การเก็บรวบรวมข้อมูล</h5>
-                                <p class="text-muted small mb-0" style="line-height: 1.6;">ข้อมูลระบุตัวตน (ชื่อ-นามสกุล, บัตรประชาชน), ข้อมูลการติดต่อ (อีเมล, เบอร์โทร), ข้อมูลทางการเงินและบัญชีธนาคาร</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                                <i class="fas fa-shield-virus text-info fs-3 mb-3"></i>
-                                <h5 class="text-white fw-bold">2. ความปลอดภัยข้อมูล</h5>
-                                <p class="text-muted small mb-0" style="line-height: 1.6;">ปกป้องด้วยใบรับรองความปลอดภัย SSL 256-bit ส่งผ่านการเชื่อมต่อเข้ารหัส HTTPS ไปยังเซิร์ฟเวอร์ความปลอดภัยสูง</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4">
-                            <div class="p-4 rounded-4 h-100" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                                <i class="fas fa-user-gear text-warning fs-3 mb-3"></i>
-                                <h5 class="text-white fw-bold">3. สิทธิของผู้ใช้</h5>
-                                <p class="text-muted small mb-0" style="line-height: 1.6;">สิทธิขอเข้าถึง แก้ไข ลบข้อมูลส่วนบุคคล (ถูกลืม) หรือถอนความยินยอมได้ตามกฎหมาย PDPA</p>
-                            </div>
-                        </div>
+                    <div class="p-4 rounded-4 mb-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
+                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec1_title'); ?></h5>
+                        <p class="text-slate mb-2 small"><?= $this->lang->line('privacy_sec1_intro'); ?></p>
+                        <ul class="text-slate small mb-4">
+                            <?php $sec1_items = $this->lang->line('privacy_sec1_items'); ?>
+                            <?php if (!empty($sec1_items)): foreach ($sec1_items as $item): ?>
+                                <li><?= $item; ?></li>
+                            <?php endforeach; endif; ?>
+                        </ul>
+
+                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec2_title'); ?></h5>
+                        <p class="text-slate mb-2 small"><?= $this->lang->line('privacy_sec2_intro'); ?></p>
+                        <ul class="text-slate small mb-4">
+                            <?php $sec2_items = $this->lang->line('privacy_sec2_items'); ?>
+                            <?php if (!empty($sec2_items)): foreach ($sec2_items as $item): ?>
+                                <li><?= $item; ?></li>
+                            <?php endforeach; endif; ?>
+                        </ul>
+
+                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec3_title'); ?></h5>
+                        <ul class="text-slate small mb-4">
+                            <?php $sec3_items = $this->lang->line('privacy_sec3_items'); ?>
+                            <?php if (!empty($sec3_items)): foreach ($sec3_items as $item): ?>
+                                <li><?= $item; ?></li>
+                            <?php endforeach; endif; ?>
+                        </ul>
+
+                        <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('privacy_sec4_title'); ?></h5>
+                        <p class="text-slate small mb-0"><?= $this->lang->line('privacy_sec4_desc'); ?></p>
                     </div>
                 </div>
             </div>
@@ -114,37 +121,80 @@
                     <h3 class="text-white fw-bold mb-4 border-start border-4 border-info ps-3">
                         <?= $this->lang->line('terms_heading'); ?>
                     </h3>
-                    <p class="text-slate fs-5 mb-4" style="line-height: 1.85;">
-                        <?= $this->lang->line('terms_intro'); ?>
+                    <p class="text-slate fs-6 mb-4" style="line-height: 1.85;">
+                        <?= nl2br($this->lang->line('terms_intro')); ?>
                     </p>
 
                     <div class="p-4 rounded-4" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                        <h5 class="text-white fw-bold mb-3">ผู้มีสิทธิใช้บริการ:</h5>
+                        <h5 class="text-white fw-bold mb-3"><?= $this->lang->line('terms_eligible_title'); ?>:</h5>
                         <ul class="text-slate mb-4 fs-6">
-                            <li>มีอายุไม่ต่ำกว่า 20 ปีบริบูรณ์</li>
-                            <li>มีรายได้หรือแหล่งรายได้ที่มั่นคง</li>
-                            <li>มีบัญชีธนาคารในชื่อตนเอง</li>
-                            <li>ให้ข้อมูลและเอกสารที่ถูกต้องครบถ้วน</li>
+                            <?php $eligible_items = $this->lang->line('terms_eligible_items'); ?>
+                            <?php if (!empty($eligible_items)): foreach ($eligible_items as $item): ?>
+                                <li><?= $item; ?></li>
+                            <?php endforeach; endif; ?>
                         </ul>
 
-                        <h5 class="text-white fw-bold mb-3">สรุปข้อตกลง 15 ข้อ:</h5>
-                        <ol class="text-slate mb-0 fs-6" style="line-height: 1.85;">
-                            <li class="mb-2"><strong>คำจำกัดความ:</strong> กำหนดนิยามเกี่ยวกับผู้กู้ ผู้ให้กู้ อุ่นใจแคช วันจ่ายเงินกู้ และวันครบกำหนด</li>
-                            <li class="mb-2"><strong>การลงทะเบียนบัญชี:</strong> ลงทะเบียนเพียงครั้งเดียวเพื่อรับหมายเลขลูกค้า</li>
-                            <li class="mb-2"><strong>การเบิกจ่ายเงินกู้:</strong> ต้องใช้ตามวัตถุประสงค์ ห้ามใช้ในกิจกรรมผิดกฎหมายหรือการพนัน</li>
-                            <li class="mb-2"><strong>การโอนเงินกู้:</strong> โอนเข้าบัญชีธนาคารที่ลงทะเบียนไว้หลังอนุมัติ</li>
-                            <li class="mb-2"><strong>การระงับหรือยกเลิก:</strong> หากผิดสัญญาหรือไม่สามารถชำระเงินตามกำหนด</li>
-                            <li class="mb-2"><strong>วิธีการชำระคืน:</strong> ธนาคารออนไลน์ ฝากเข้าบัญชี หรือแจ้งรายละเอียดชำระ</li>
-                            <li class="mb-2"><strong>ค่าธรรมเนียมและภาษี:</strong> ผู้กู้รับผิดชอบค่าใช้จ่ายตามสัญญา</li>
-                            <li class="mb-2"><strong>การรับรองข้อมูล:</strong> ข้อมูลทั้งหมดที่ให้แก่ผู้ให้กู้เป็นความจริง</li>
-                            <li class="mb-2"><strong>การผิดสัญญา:</strong> เรียกคืนเงินกู้ทั้งหมดทันที พร้อมดอกเบี้ยและค่าปรับ</li>
-                            <li class="mb-2"><strong>การบอกเลิกสัญญา:</strong> สัญญามีผลตั้งแต่วันยอมรับเงื่อนไข</li>
-                            <li class="mb-2"><strong>การปฏิบัติตามกฎหมาย:</strong> ตรวจสอบป้องกันการฟอกเงินและอาชญากรรมทางการเงิน</li>
-                            <li class="mb-2"><strong>การระงับข้อพิพาท:</strong> เจรจากันก่อน หากไม่สำเร็จยื่นฟ้องต่อศาล</li>
-                            <li class="mb-2"><strong>การโอนสิทธิ:</strong> ไม่สามารถโอนสิทธิให้ผู้อื่นโดยไม่ได้อนุญาต</li>
-                            <li class="mb-2"><strong>การรับรองของผู้กู้:</strong> รับรองว่ามีความสามารถทางกฎหมายในการทำสัญญา</li>
-                            <li class="mb-2"><strong>ช่องทางการติดต่อ:</strong> cs@infinitefintech.co.th / LINE: @-----------</li>
-                        </ol>
+                        <!-- Terms Accordion Header & Controls -->
+                        <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                            <h5 class="text-white fw-bold mb-0">
+                                <i class="fas fa-list-check text-info me-2"></i><?= $this->lang->line('terms_summary_title'); ?>
+                            </h5>
+                            <div class="d-flex gap-2">
+                                <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-3 py-1 fs-7" id="btnExpandAllTerms">
+                                    <i class="fas fa-angles-down me-1"></i> <?= $this->lang->line('agreement_expand_all'); ?>
+                                </button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fs-7" id="btnCollapseAllTerms">
+                                    <i class="fas fa-angles-up me-1"></i> <?= $this->lang->line('agreement_collapse_all'); ?>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Terms Accordion Container -->
+                        <div class="accordion custom-accordion d-flex flex-column gap-3 mb-0" id="accordionTermsService">
+                            <?php 
+                            $terms_items = $this->lang->line('terms_summary_items');
+                            if (!empty($terms_items)):
+                                foreach ($terms_items as $t_index => $t_item):
+                            ?>
+                                <div class="accordion-item rounded-4 overflow-hidden border-0" style="border: 1px solid rgba(56, 189, 248, 0.2) !important;">
+                                    <h2 class="accordion-header" id="headingTerms<?= $t_index + 1; ?>">
+                                        <button class="accordion-button collapsed bg-transparent text-white fw-bold fs-6 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTerms<?= $t_index + 1; ?>" aria-expanded="false" aria-controls="collapseTerms<?= $t_index + 1; ?>">
+                                            <span class="badge bg-info bg-opacity-25 text-info me-2"><?= $t_item['badge']; ?></span>
+                                            <?= $t_item['title']; ?>
+                                        </button>
+                                    </h2>
+                                    <div id="collapseTerms<?= $t_index + 1; ?>" class="accordion-collapse collapse" aria-labelledby="headingTerms<?= $t_index + 1; ?>" data-bs-parent="#accordionTermsService">
+                                        <div class="accordion-body text-slate fs-6 pt-0" style="line-height: 1.8;">
+                                            <?= $t_item['desc']; ?>
+                                        </div>
+                                    </div>
+                                </div>
+                            <?php 
+                                endforeach;
+                            endif; 
+                            ?>
+                        </div>
+
+                        <script>
+                        document.addEventListener('DOMContentLoaded', function() {
+                            var btnExpandT = document.getElementById('btnExpandAllTerms');
+                            var btnCollapseT = document.getElementById('btnCollapseAllTerms');
+                            if (btnExpandT && btnCollapseT) {
+                                btnExpandT.addEventListener('click', function() {
+                                    document.querySelectorAll('#accordionTermsService .accordion-collapse').forEach(function(el) {
+                                        var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                        bsCollapse.show();
+                                    });
+                                });
+                                btnCollapseT.addEventListener('click', function() {
+                                    document.querySelectorAll('#accordionTermsService .accordion-collapse').forEach(function(el) {
+                                        var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                        bsCollapse.hide();
+                                    });
+                                });
+                            }
+                        });
+                        </script>
                     </div>
                 </div>
             </div>
@@ -152,45 +202,131 @@
             <!-- 4. Loan Agreement Sample -->
             <div class="tab-pane fade <?= (isset($active_tab) && $active_tab == 'agreement') ? 'show active' : '' ?>" id="pills-agreement" role="tabpanel">
                 <div class="card-3d p-4 p-md-5">
-                    <h3 class="text-white fw-bold mb-4 border-start border-4 border-info ps-3">
-                        <?= $this->lang->line('agreement_heading'); ?>
-                    </h3>
-                    
-                    <div class="p-4 rounded-4" style="background: #F8FAFC; border: 1px solid var(--border-glass); font-family: monospace;">
-                        <h4 class="text-center text-white fw-bold mb-4">สัญญาเงินกู้ (ตัวอย่าง)</h4>
-                        <p class="text-muted text-center mb-4">สัญญานี้ทำขึ้น ณ วันที่ [DD/MM/YYYY]</p>
-
-                        <div class="row g-4 mb-4">
-                            <div class="col-md-6">
-                                <div class="p-3 rounded-3" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.15);">
-                                    <h6 class="text-info fw-bold">ผู้ให้กู้:</h6>
-                                    <p class="text-slate mb-1"><strong>ชื่อบริษัท:</strong> บริษัท อินฟินิท ฟินเทค จำกัด</p>
-                                    <p class="text-slate mb-1"><strong>ที่ตั้ง:</strong> 115 หมู่ที่ 2 ตำบลละหาร อำเภอบางบัวทอง จังหวัดนนทบุรี 11110</p>
-                                    <p class="text-slate mb-0"><strong>อีเมล:</strong> cs@infinitefintech.co.th</p>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="p-3 rounded-3" style="background: #FFFFFF; border: 1px solid rgba(124, 58, 237, 0.15);">
-                                    <h6 class="text-warning fw-bold">ผู้กู้:</h6>
-                                    <p class="text-slate mb-1"><strong>ชื่อ:</strong> ________________________</p>
-                                    <p class="text-slate mb-1"><strong>ที่อยู่:</strong> ________________________</p>
-                                    <p class="text-slate mb-0"><strong>เลขประจำตัวประชาชน:</strong> ________________________</p>
-                                </div>
-                            </div>
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4 pb-3 border-bottom" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                        <div>
+                            <span class="badge bg-info bg-opacity-25 text-info px-3 py-2 rounded-pill fw-bold mb-2">
+                                <i class="fas fa-file-contract me-1"></i> <?= $this->lang->line('agreement_badge'); ?>
+                            </span>
+                            <h3 class="text-white fw-bold mb-0"><?= $this->lang->line('agreement_heading'); ?></h3>
                         </div>
-
-                        <h5 class="text-white fw-bold mb-2">เงื่อนไขเงินกู้:</h5>
-                        <ul class="text-slate mb-4 fs-6">
-                            <li>จำนวนเงินกู้: ________ (บาท)</li>
-                            <li>อัตราดอกเบี้ยต่อปี (APR): อัตราดอกเบี้ยคงที่ ____% ต่อปี</li>
-                            <li>ระยะเวลาเงินกู้: ชำระคืนภายใน ____ วัน (ครบกำหนดวันที่ ______________)</li>
-                            <li>ค่าทวงถามหนี้: 50 บาท นับตั้งแต่วันครบกำหนดชำระตามกฎหมายกำหนด</li>
-                        </ul>
-
-                        <div class="text-muted small">
-                            *หมายเหตุ: ตัวอย่างสัญญาเงินกู้นี้จัดทำขึ้นเพื่อแสดงข้อตกลงและเงื่อนไขเบื้องต้น รายละเอียดสัญญาจริงจะถูกสร้างขึ้นในรูปแบบอิเล็กทรอนิกส์ผ่านแอปพลิเคชัน อุ่นใจแคช
+                        <div class="text-slate small bg-opacity-50 px-3 py-2 rounded-3 border border-secondary border-opacity-25">
+                            <i class="far fa-calendar-alt text-info me-1"></i> <?= $this->lang->line('agreement_date_label'); ?>
                         </div>
                     </div>
+
+                    <!-- Parties Box -->
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 h-100" style="background: rgba(56, 189, 248, 0.05); border: 1px solid rgba(56, 189, 248, 0.2);">
+                                <h5 class="text-info fw-bold mb-3 d-flex align-items-center gap-2">
+                                    <i class="fas fa-building-columns fs-4"></i> <?= $this->lang->line('agreement_lender_title'); ?>
+                                </h5>
+                                <ul class="list-unstyled text-slate mb-3 fs-6 d-flex flex-column gap-2">
+                                    <li><strong><?= $this->lang->line('agreement_lender_comp_label'); ?></strong> <?= $this->lang->line('agreement_lender_comp'); ?></li>
+                                    <li><strong><?= $this->lang->line('agreement_lender_addr_label'); ?></strong> <?= $this->lang->line('agreement_lender_addr'); ?></li>
+                                    <li><strong><?= $this->lang->line('agreement_lender_contact_label'); ?></strong> <?= $this->lang->line('agreement_lender_contact'); ?></li>
+                                </ul>
+                                <div class="small text-muted border-top pt-2" style="border-color: rgba(56, 189, 248, 0.15) !important;">
+                                    <?= $this->lang->line('agreement_lender_suffix'); ?>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="p-4 rounded-4 h-100" style="background: rgba(245, 158, 11, 0.05); border: 1px solid rgba(245, 158, 11, 0.2);">
+                                <h5 class="text-warning fw-bold mb-3 d-flex align-items-center gap-2">
+                                    <i class="fas fa-user-check fs-4"></i> <?= $this->lang->line('agreement_borrower_title'); ?>
+                                </h5>
+                                <ul class="list-unstyled text-slate mb-3 fs-6 d-flex flex-column gap-2">
+                                    <li><strong><?= $this->lang->line('agreement_borrower_name_label'); ?></strong> ________________________</li>
+                                    <li><strong><?= $this->lang->line('agreement_borrower_addr_label'); ?></strong> ________________________</li>
+                                    <li><strong><?= $this->lang->line('agreement_borrower_id_label'); ?></strong> ________________________</li>
+                                    <li><strong><?= $this->lang->line('agreement_borrower_email_label'); ?></strong> ________________________</li>
+                                    <li><strong><?= $this->lang->line('agreement_borrower_phone_label'); ?></strong> ________________________</li>
+                                </ul>
+                                <div class="small text-muted border-top pt-2" style="border-color: rgba(245, 158, 11, 0.15) !important;">
+                                    <?= $this->lang->line('agreement_borrower_suffix'); ?>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Accordion Action Bar -->
+                    <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-3">
+                        <h5 class="text-white fw-bold mb-0">
+                            <i class="fas fa-list-check text-info me-2"></i><?= $this->lang->line('agreement_details_title'); ?>
+                        </h5>
+                        <div class="d-flex gap-2">
+                            <button type="button" class="btn btn-sm btn-outline-info rounded-pill px-3 py-1 fs-7" id="btnExpandAll">
+                                <i class="fas fa-angles-down me-1"></i> <?= $this->lang->line('agreement_expand_all'); ?>
+                            </button>
+                            <button type="button" class="btn btn-sm btn-outline-secondary rounded-pill px-3 py-1 fs-7" id="btnCollapseAll">
+                                <i class="fas fa-angles-up me-1"></i> <?= $this->lang->line('agreement_collapse_all'); ?>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Accordion container -->
+                    <div class="accordion custom-accordion d-flex flex-column gap-3 mb-4" id="accordionLoanAgreement">
+                        <?php 
+                        $accordion_items = $this->lang->line('agreement_accordion_items');
+                        if (!empty($accordion_items)):
+                            foreach ($accordion_items as $index => $item):
+                        ?>
+                            <div class="accordion-item rounded-4 overflow-hidden border-0" style="border: 1px solid <?= !empty($item['border_color']) ? $item['border_color'] : 'rgba(56, 189, 248, 0.2)' ?> !important;">
+                                <h2 class="accordion-header" id="heading<?= $item['id']; ?>">
+                                    <button class="accordion-button <?= $index === 0 ? '' : 'collapsed' ?> bg-transparent <?= !empty($item['title_class']) ? $item['title_class'] : 'text-white' ?> fw-bold fs-6 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapse<?= $item['id']; ?>" aria-expanded="<?= $index === 0 ? 'true' : 'false' ?>" aria-controls="collapse<?= $item['id']; ?>">
+                                        <?php if (!empty($item['badge'])): ?>
+                                            <span class="badge <?= !empty($item['badge_class']) ? $item['badge_class'] : 'bg-info bg-opacity-25 text-info' ?> me-2"><?= $item['badge']; ?></span>
+                                        <?php endif; ?>
+                                        <?php if (!empty($item['icon'])): ?>
+                                            <i class="<?= $item['icon']; ?> me-2"></i>
+                                        <?php endif; ?>
+                                        <?= $item['title']; ?>
+                                    </button>
+                                </h2>
+                                <div id="collapse<?= $item['id']; ?>" class="accordion-collapse collapse <?= $index === 0 ? 'show' : '' ?>" aria-labelledby="heading<?= $item['id']; ?>">
+                                    <div class="accordion-body text-slate fs-6 pt-0" style="line-height: 1.8;">
+                                        <?= $item['body']; ?>
+                                    </div>
+                                </div>
+                            </div>
+                        <?php 
+                            endforeach;
+                        endif;
+                        ?>
+                    </div>
+
+                    <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var btnExpand = document.getElementById('btnExpandAll');
+                        var btnCollapse = document.getElementById('btnCollapseAll');
+                        if (btnExpand && btnCollapse) {
+                            btnExpand.addEventListener('click', function() {
+                                document.querySelectorAll('#accordionLoanAgreement .accordion-collapse').forEach(function(el) {
+                                    var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                    bsCollapse.show();
+                                });
+                            });
+                            btnCollapse.addEventListener('click', function() {
+                                document.querySelectorAll('#accordionLoanAgreement .accordion-collapse').forEach(function(el) {
+                                    var bsCollapse = bootstrap.Collapse.getInstance(el) || new bootstrap.Collapse(el, {toggle: false});
+                                    bsCollapse.hide();
+                                });
+                            });
+                        }
+                    });
+                    </script>
+
+                    <!-- Footer Effective Date & Seal -->
+                    <div class="d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 mt-4 pt-4 border-top" style="border-color: rgba(255, 255, 255, 0.1) !important;">
+                        <div class="text-slate fs-6">
+                            <strong><?= $this->lang->line('agreement_effective_date_label'); ?>:</strong> ____/_____/_____
+                        </div>
+                        <div class="text-white fw-bold fs-6">
+                            <strong><?= $this->lang->line('agreement_company_label'); ?>:</strong> <?= $this->lang->line('agreement_lender_comp'); ?>
+                        </div>
+                    </div>
+
                 </div>
             </div>
 

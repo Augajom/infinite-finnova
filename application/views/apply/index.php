@@ -99,14 +99,14 @@
 
             <!-- Download CTA -->
             <div class="text-center mt-5 p-4 p-md-5 rounded-4" style="background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(124, 58, 237, 0.08)); border: 1px solid rgba(124, 58, 237, 0.22);">
-                <h4 class="text-white fw-bold mb-2 fs-3">ดาวน์โหลดแอปพลิเคชัน อุ่นใจแคช</h4>
-                <p class="text-slate mb-4 fs-5">พร้อมยื่นคำขอสินเชื่อได้ทันที 24 ชั่วโมง</p>
+                <h4 class="text-white fw-bold mb-2 fs-3"><?= $this->lang->line('app_download_title'); ?></h4>
+                <p class="text-slate mb-4 fs-5"><?= $this->lang->line('app_download_sub'); ?></p>
                 <div class="d-flex flex-wrap justify-content-center gap-3">
                     <a href="<?= $this->lang->line('app_download_url'); ?>" target="_blank" class="btn-primary-3d fs-5 py-3 px-4">
                         <i class="fab fa-google-play fs-4 me-2"></i> Google Play Store
                     </a>
                     <a href="<?= site_root_url('contact') ?>" class="btn-outline-3d fs-5 py-3 px-4">
-                        <i class="fas fa-headset me-2"></i> ติดต่อฝ่ายบริการลูกค้า
+                        <i class="fas fa-headset me-2"></i> <?= $this->lang->line('btn_contact_support'); ?>
                     </a>
                 </div>
             </div>

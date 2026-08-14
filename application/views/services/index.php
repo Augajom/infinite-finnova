@@ -130,7 +130,6 @@
         <!-- Calculation Example Image Viewer Section -->
         <div class="card-3d p-4 p-md-5">
             <div class="text-center mb-4">
-                <span class="badge bg-warning bg-opacity-25 text-warning mb-2 px-3 py-2 rounded-pill fw-bold">Sample Calculation</span>
                 <h3 class="text-white fw-bold mb-1"><?= $this->lang->line('calc_example_title'); ?></h3>
                 <p class="text-muted small"><?= $this->lang->line('calc_example_subtitle'); ?></p>
                 <div class="p-3 rounded-3 d-inline-block text-white fw-bold" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.22);">
