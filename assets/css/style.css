@@ -302,7 +302,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Section Frosted Glass Backgrounds Light Mode */
 .section-blurred-bg {
-    background: transparent;
+    background: rgba(255, 255, 255, 0.877);
     border-top: 1px solid rgba(124, 58, 237, 0.08);
     border-bottom: 1px solid rgba(124, 58, 237, 0.08);
 }

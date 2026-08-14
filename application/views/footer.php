@@ -7,21 +7,18 @@
             <div class="col-lg-5 col-md-6">
                 <div class="d-flex align-items-center gap-3 mb-3">
                     <img src="<?= base_url('assets/images/logo.png') ?>" alt="INFINITE FINTECH" style="height: 48px; object-fit: contain;">
+                    <h5 class="text-white fw-bold"><?= $this->lang->line('company_fullname'); ?></h5>
                 </div>
-                <h5 class="text-white fw-bold mb-2"><?= $this->lang->line('company_fullname'); ?></h5>
-                <p class="text-muted small mb-3">
+                <p class="text-muted small mb-3" style="white-space: pre-line;">
                     <?= $this->lang->line('footer_desc'); ?>
                 </p>
-                <div class="p-3 rounded-3 mb-3" style="background: rgba(16, 185, 129, 0.08); border: 1px solid rgba(16, 185, 129, 0.2);">
+                <div class="p-3 rounded-3 mb-3" style="background: rgba(254, 255, 255, 0.06); border: 1px solid rgba(16, 185, 129, 0.2);">
                     <div class="small text-white-50 mb-2">
-                        <i class="fas fa-certificate text-success me-2"></i><?= $this->lang->line('footer_lic_info'); ?>
+                        <i class="fas fa-certificate text-success me-2"></i><?= nl2br($this->lang->line('footer_lic_info')); ?>
                     </div>
                     <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-sm btn-outline-success rounded-pill px-3 py-1 text-nowrap">
                         <i class="fas fa-external-link-alt me-1"></i> <?= $this->lang->line('footer_lic_verify'); ?>
                     </a>
-                </div>
-                <div class="small text-warning">
-                    <i class="fas fa-location-dot me-1"></i> <?= $this->lang->line('area_limit_desc'); ?>
                 </div>
             </div>
 

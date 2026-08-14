@@ -39,16 +39,6 @@
                         </p>
                     </div>
 
-                    <!-- License Summary -->
-                    <div class="p-3 rounded-3 mb-4" style="background: rgba(2, 132, 199, 0.06); border: 1px solid rgba(2, 132, 199, 0.22);">
-                        <div class="small text-muted mb-1">
-                            <i class="fas fa-certificate text-info me-2"></i><?= $this->lang->line('home_license_no'); ?>
-                        </div>
-                        <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="small text-info fw-bold text-decoration-none">
-                            <?= $this->lang->line('home_license_check_btn'); ?> <i class="fas fa-arrow-up-right-from-square ms-1"></i>
-                        </a>
-                    </div>
-
                     <!-- Google Maps Button -->
                     <a href="https://maps.google.com/?q=115+Moo+2+Bang+Bua+Thong+Nonthaburi" target="_blank" class="btn-primary-3d w-100 justify-content-center py-3 fs-5">
                         <i class="fas fa-map-location-dot me-2"></i> <?= $this->lang->line('contact_map_btn'); ?>
@@ -77,17 +67,6 @@
                         <div>
                             <span class="text-muted small"><?= $this->lang->line('contact_email_label'); ?></span>
                             <h6 class="text-white mb-0 fw-bold fs-6" style="white-space: pre-line;"><?= nl2br($this->lang->line('contact_email_val')); ?></h6>
-                        </div>
-                    </div>
-
-                    <!-- LINE Support -->
-                    <div class="p-4 rounded-4 mb-4 d-flex align-items-center gap-3" style="background: rgba(124, 58, 237, 0.04); border: 1px solid var(--border-glass);">
-                        <div class="badge rounded-circle bg-info bg-opacity-25 text-info p-3 fs-4" style="width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; min-width: 48px;">
-                            <i class="fab fa-line text-success"></i>
-                        </div>
-                        <div>
-                            <span class="text-muted small"><?= $this->lang->line('contact_line_label'); ?></span>
-                            <h6 class="text-white mb-0 fw-bold fs-6"><?= $this->lang->line('contact_line_val'); ?></h6>
                         </div>
                     </div>
 

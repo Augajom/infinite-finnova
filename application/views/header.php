@@ -81,7 +81,7 @@
                 </div>
 
                 <!-- Apply Loan CTA Button -->
-                <a href="<?= site_root_url('apply') ?>" class="btn-primary-3d text-nowrap py-2 px-3 fs-6">
+                <a href="<?= $this->lang->line('app_download_url'); ?>" target="_blank" class="btn-primary-3d text-nowrap py-2 px-3 fs-6">
                     <i class="fas fa-paper-plane"></i> <?= $this->lang->line('btn_apply_loan'); ?>
                 </a>
             </div>
