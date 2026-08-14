@@ -1,5 +1,5 @@
 <!-- Hero Section (Full 100vh Height & Ultra-Bright High-Contrast Text) -->
-<section class="hero-section hero-section-home section-blurred-bg position-relative d-flex align-items-center" style="min-height: 100vh; padding-top: 130px; padding-bottom: 60px; background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.82)), url('<?= base_url('assets/images/bg1.jpg') ?>') center center / cover no-repeat;">
+<section class="hero-section hero-section-home section-blurred-bg position-relative d-flex align-items-center" style="min-height: 100vh; padding-top: 130px; padding-bottom: 60px; background: linear-gradient(rgba(15, 23, 42, 0.72), rgba(15, 23, 42, 0.82)), url('<?= base_url('assets/images/bg.jpg') ?>') center center / cover no-repeat;">
     <!-- Animated Soft Aura Background Blobs -->
     <div class="hero-aura-blob-1"></div>
     <div class="hero-aura-blob-2"></div>
