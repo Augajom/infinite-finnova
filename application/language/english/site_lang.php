@@ -561,6 +561,9 @@ $lang['contact_email_val'] = "support@infinitefintech.co.th";
 $lang['contact_line_label'] = "LINE Official Account:";
 $lang['contact_line_val'] = "@-----------";
 $lang['contact_map_btn'] = "Open Google Maps";
+$lang['contact_hero_badge'] = "Customer Service & Support";
+$lang['contact_pico_badge'] = "PICO Finance Provider";
+$lang['contact_online_subtitle'] = "Online Customer Service Channels";
 
 // Footer
 $lang['footer_desc'] = "Licensed Provincial Retail Loan Provider (PICO Finance) under the supervision of the Ministry of Finance, Thailand.";

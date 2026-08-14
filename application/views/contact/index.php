@@ -3,7 +3,7 @@
     <div class="container-xxl">
         <div class="text-center max-w-800 mx-auto">
             <span class="badge-pico mb-3">
-                <i class="fas fa-headset text-info"></i> Customer Service & Support
+                <i class="fas fa-headset text-info"></i> <?= $this->lang->line('contact_hero_badge'); ?>
             </span>
             <h1 class="display-4 text-white fw-bold mb-3"><?= $this->lang->line('contact_hero_title'); ?></h1>
             <p class="lead text-slate fs-5"><?= $this->lang->line('contact_hero_subtitle'); ?></p>
@@ -25,7 +25,7 @@
                         </div>
                         <div>
                             <h4 class="text-white fw-bold mb-0"><?= $this->lang->line('company_fullname'); ?></h4>
-                            <span class="small text-info fw-bold">PICO Finance Provider</span>
+                            <span class="small text-info fw-bold"><?= $this->lang->line('contact_pico_badge'); ?></span>
                         </div>
                     </div>
 
@@ -55,7 +55,7 @@
                         </div>
                         <div>
                             <h4 class="text-white fw-bold mb-0"><?= $this->lang->line('contact_info_title'); ?></h4>
-                            <span class="small text-muted">ช่องทางบริการลูกค้าออนไลน์</span>
+                            <span class="small text-muted"><?= $this->lang->line('contact_online_subtitle'); ?></span>
                         </div>
                     </div>
 
