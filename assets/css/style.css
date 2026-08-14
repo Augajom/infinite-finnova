@@ -581,7 +581,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Notebook / Laptop Screen Optimization (13-15" Displays & 125%/150% Scaling) */
-@media (min-width: 992px) and (max-width: 1440px) {
+@media (min-width: 1200px) and (max-width: 1440px) {
     .futuristic-nav {
         top: 12px;
         width: 96% !important;
@@ -620,7 +620,6 @@ h1, h2, h3, h4, h5, h6 {
     }
     p, .text-slate {
         font-size: 0.95rem !important;
-        line-height: 1.7 !important;
     }
     .card-3d {
         padding: 24px 20px !important;
@@ -630,8 +629,8 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-/* Mobile Responsiveness & Full-Width Vertical Navbar Drawer */
-@media (max-width: 991px) {
+/* Mobile Responsiveness & Full-Width Vertical Navbar Drawer (< 1200px) */
+@media (max-width: 1199px) {
     .futuristic-nav {
         top: 10px;
         width: 95%;

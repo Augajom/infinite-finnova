@@ -17,7 +17,7 @@
 <div class="main-wrapper">
 
 <!-- Redesigned Futuristic Floating Navbar -->
-<nav class="navbar navbar-expand-lg futuristic-nav" id="mainNavbar">
+<nav class="navbar navbar-expand-xl futuristic-nav" id="mainNavbar">
     <div class="container-fluid p-0">
         
         <!-- Brand Logo -->
