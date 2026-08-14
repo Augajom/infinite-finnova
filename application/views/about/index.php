@@ -32,18 +32,6 @@
                     <p class="text-slate mb-0 fs-5" style="line-height: 1.85;">
                         <?= $this->lang->line('about_p4'); ?>
                     </p>
-
-                    <hr class="my-5" style="border-color: rgba(255, 255, 255, 0.1);">
-
-                    <div class="p-3 p-md-4 rounded-4 d-flex flex-column flex-md-row align-items-md-center justify-content-between gap-3" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25);">
-                        <div>
-                            <span class="text-muted small"><i class="fas fa-file-contract text-info me-1"></i> ใบอนุญาตกระทรวงการคลัง</span>
-                            <h6 class="text-white fw-bold mb-0 fs-5 text-break"><?= $this->lang->line('home_license_no'); ?></h6>
-                        </div>
-                        <a href="<?= $this->lang->line('home_license_check_url'); ?>" target="_blank" class="btn btn-outline-success rounded-pill px-3 px-md-5 py-2 text-center text-wrap" style="max-width: 100%; word-break: break-word;">
-                            <i class="fas fa-external-link-alt me-1"></i> <?= $this->lang->line('home_license_check_btn'); ?>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

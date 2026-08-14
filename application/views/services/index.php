@@ -84,49 +84,59 @@
             </div>
         </div>
 
-        <!-- Qualifications & Documents Grid (คุณสมบัติผู้สมัคร & เอกสารที่ต้องใช้) -->
-        <div class="row g-4 mb-5">
-            <!-- Qualifications -->
-            <div class="col-lg-6">
-                <div class="card-3d h-100 p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="card-icon-wrapper mb-0" style="width: 54px; height: 54px;">
-                            <i class="fas fa-user-check"></i>
-                        </div>
-                        <h4 class="text-white fw-bold mb-0"><?= $this->lang->line('qual_title'); ?></h4>
-                    </div>
-
-                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                        <?php $quals = $this->lang->line('qual_items'); ?>
-                        <?php if (!empty($quals)): foreach ($quals as $item): ?>
-                            <li class="d-flex align-items-start gap-3">
-                                <i class="fas fa-check-circle text-info mt-1 fs-5"></i>
-                                <span class="text-slate fs-5"><?= $item; ?></span>
-                            </li>
-                        <?php endforeach; endif; ?>
-                    </ul>
-                </div>
+        <!-- Qualifications & Documents Accordion (กดแล้วเปิด-ปิด แทน Card) -->
+        <div class="card-3d p-4 p-md-5 mb-5">
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+                <h3 class="text-white fw-bold mb-0 border-start border-4 border-info ps-3">
+                    <?= $this->lang->line('qual_title'); ?> & <?= $this->lang->line('doc_title'); ?>
+                </h3>
             </div>
 
-            <!-- Required Documents -->
-            <div class="col-lg-6">
-                <div class="card-3d h-100 p-4">
-                    <div class="d-flex align-items-center gap-3 mb-4">
-                        <div class="card-icon-wrapper mb-0" style="width: 54px; height: 54px;">
-                            <i class="fas fa-folder-open"></i>
+            <div class="accordion custom-accordion d-flex flex-column gap-3 mb-0" id="accordionQualDoc">
+                <!-- 1. Qualifications -->
+                <div class="accordion-item rounded-4 overflow-hidden border-0" style="border: 2px solid rgba(56, 189, 248, 0.2) !important;">
+                    <h2 class="accordion-header" id="headingQual">
+                        <button class="accordion-button bg-transparent text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseQual" aria-expanded="true" aria-controls="collapseQual">
+                            <i class="fas fa-user-check text-info me-3 fs-4"></i>
+                            <?= $this->lang->line('qual_title'); ?>
+                        </button>
+                    </h2>
+                    <div id="collapseQual" class="accordion-collapse collapse show" aria-labelledby="headingQual" data-bs-parent="#accordionQualDoc">
+                        <div class="accordion-body text-slate fs-5 pt-0">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 pt-2">
+                                <?php $quals = $this->lang->line('qual_items'); ?>
+                                <?php if (!empty($quals)): foreach ($quals as $item): ?>
+                                    <li class="d-flex align-items-start gap-3">
+                                        <i class="fas fa-check-circle text-info mt-1 fs-5"></i>
+                                        <span><?= $item; ?></span>
+                                    </li>
+                                <?php endforeach; endif; ?>
+                            </ul>
                         </div>
-                        <h4 class="text-white fw-bold mb-0"><?= $this->lang->line('doc_title'); ?></h4>
                     </div>
+                </div>
 
-                    <ul class="list-unstyled d-flex flex-column gap-3 mb-0">
-                        <?php $docs = $this->lang->line('doc_items'); ?>
-                        <?php if (!empty($docs)): foreach ($docs as $item): ?>
-                            <li class="d-flex align-items-start gap-3">
-                                <i class="fas fa-check-circle text-info mt-1 fs-5"></i>
-                                <span class="text-slate fs-5"><?= $item; ?></span>
-                            </li>
-                        <?php endforeach; endif; ?>
-                    </ul>
+                <!-- 2. Required Documents -->
+                <div class="accordion-item rounded-4 overflow-hidden border-0" style="border: 2px solid rgba(56, 189, 248, 0.2) !important;">
+                    <h2 class="accordion-header" id="headingDoc">
+                        <button class="accordion-button collapsed bg-transparent text-white fw-bold fs-5 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseDoc" aria-expanded="false" aria-controls="collapseDoc">
+                            <i class="fas fa-folder-open text-warning me-3 fs-4"></i>
+                            <?= $this->lang->line('doc_title'); ?>
+                        </button>
+                    </h2>
+                    <div id="collapseDoc" class="accordion-collapse collapse show" aria-labelledby="headingDoc" data-bs-parent="#accordionQualDoc">
+                        <div class="accordion-body text-slate fs-5 pt-0">
+                            <ul class="list-unstyled d-flex flex-column gap-3 mb-0 pt-2">
+                                <?php $docs = $this->lang->line('doc_items'); ?>
+                                <?php if (!empty($docs)): foreach ($docs as $item): ?>
+                                    <li class="d-flex align-items-start gap-3">
+                                        <i class="fas fa-check-circle text-info mt-1 fs-5"></i>
+                                        <span><?= $item; ?></span>
+                                    </li>
+                                <?php endforeach; endif; ?>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
